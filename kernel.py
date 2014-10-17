@@ -3,7 +3,7 @@
 GRAMMER ={
 'program':[['function_statement','declare','function_defination']],
 'function_statement':[['null'],['type','id','params',';']],
-'function_defination':[['null'], ['type','id','params','funcbody']],
+'function_defination':[['null'], ['type','id','params','function_body']],
 'type':[['void','char','byte','int','long','float','double']],
 'params':[['param','paramn'],['null']],
 'paramn':[['null'],[',','param','paramn']],
@@ -51,7 +51,7 @@ GRAMMER ={
 }
 
 NONTERMINAL=['program','function_statement','function_defination','type',
-			'params','param','function_body','function_internal','declare',
+			'params','paramn','param','function_body','function_internal','declare',
 			'ids','idN','assign','assign_idN','function','constant','expression',
 			'single_expression','single_operator','double_expression','double_operator',
 			'loop_expression','jump_signal','for_expression','for_internal_expression',
@@ -60,7 +60,7 @@ NONTERMINAL=['program','function_statement','function_defination','type',
 			]
 TERMINAL=['null','id',';','void','char','byte','shot','int','long','float','double',
 		',','=','integer','decimal','character','string','!','^','&','++','--','+','-','*','/',
-		'&&','||','{','}','break','continue','goto','return','for','while','do','if','else'
+		'&&','||','{','}',',','(',')','break','continue','goto','return','for','while','do','if','else'
 		]
 
 FIRST={}
@@ -106,21 +106,46 @@ def getFirst():
 					
 def getFollow():
 	global GRAMMER, NONTERMINAL, TERMINAL, FOLLOW
+
+	for each in TERMINAL:
+		FOLLOW[each]=[]
+
+	for each_nonterminal in NONTERMINAL:
+		FOLLOW[each_nonterminal] = []
+	
 	FOLLOW['program']=['$']
+
+	# 放入first集,第二步
+	for each_nonterminal in NONTERMINAL:
+		for each_sequence in GRAMMER[each_nonterminal]:
+			for i in xrange(0,len(each_sequence)-1):
+				for each_next_marks_first in FIRST[each_sequence[i+1]]:
+					if (not each_next_marks_first in FOLLOW[each_sequence[i]])and (not each_next_marks_first=='null'):
+						FOLLOW[each_sequence[i]].append(each_next_marks_first)
+
 	stop = False
 	while (not stop):
-
-	
-
-
+		stop = True
+		# 第三步
+		for each_nonterminal in NONTERMINAL:
+			for each_sequence in GRAMMER[each_nonterminal]:
+				for i in xrange(len(each_sequence)-1,-1,-1):
+					for each_follow in FOLLOW[each_nonterminal]:
+						if not each_follow in FOLLOW[each_sequence[i]]:
+							FOLLOW[each_sequence[i]].append(each_follow)
+							stop = False
+					if not 'null' in FIRST[each_sequence[i]]:
+						break;
 
 def main():
 	print('__in main__')
 	getFirst()
-	print('ans')
+	getFollow()
 	for each_nonterminal in NONTERMINAL:
-		print(each_nonterminal, FIRST[each_nonterminal])
+		print(each_nonterminal, FOLLOW[each_nonterminal])
 
+	for each_nonterminal in TERMINAL:
+		print(each_nonterminal, FOLLOW[each_nonterminal])
 
 if __name__ == '__main__':
 	main()

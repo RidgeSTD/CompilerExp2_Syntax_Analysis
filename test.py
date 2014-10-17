@@ -1,3 +1,2 @@
-a=0
-a+=1
-print(a)
+for x in xrange(10,1,-1):
+	print(x)
