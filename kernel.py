@@ -53,22 +53,22 @@ GRAMMER ={
 NONTERMINAL=['program','function_statement','function_defination','type',
 			'params','param','function_body','function_internal','declare',
 			'ids','idN','assign','assign_idN','function','constant','expression',
-			'single_expression','double_expression','double_operator','loop_expression',
-			'jump_signal','for_expression','for_internal_expression','loop_body',
-			'loop_internal','while_expression','do_expression','if_expression',
+			'single_expression','single_operator','double_expression','double_operator',
+			'loop_expression','jump_signal','for_expression','for_internal_expression',
+			'loop_body','loop_internal','while_expression','do_expression','if_expression',
 			'if_remain','if_internal'
 			]
-TERMINAL=['$','null','id',';','void','char','byte','shot','int','long','float','double',
+TERMINAL=['null','id',';','void','char','byte','shot','int','long','float','double',
 		',','=','integer','decimal','character','string','!','^','&','++','--','+','-','*','/',
 		'&&','||','{','}','break','continue','goto','return','for','while','do','if','else'
 		]
 
 FIRST={}
-follow={}
-# dealt={} #防止重复添加符号的first集
+FOLLOW={}
+
 
 def getFirst():
-	global GRAMMER, NONTERMINAL, TERMINAL, FIRST, dealt
+	global GRAMMER, NONTERMINAL, TERMINAL, FIRST
 	print("__ingetFirst__")
 	for each in TERMINAL:
 		FIRST[each]=[each]
@@ -80,43 +80,46 @@ def getFirst():
 			if each_sequence==['null']:
 				FIRST[each_nonterminal]=['null']
 	stop = False
-	# # 初始化dealt数组
-	# for each_nonterminal in NONTERMINAL:
-	# 	dealt[each_nonterminal]=[]
-	# 	for i in xrange(0,len(G.get(each_nonterminal, []))):
-	# 		dealt[each_nonterminal].append(-1)
 
 	while(not stop):
 		stop=True
 		for each_nonterminal in NONTERMINAL:
 			# 将Y0中新增的first填入并处理连续的有null
-			counter=0
 			for each_sequence in GRAMMER.get(each_nonterminal, []):
-				counter+=1
+				counter=0
 				if(each_sequence==[]):
-					print('Wrongnot in Kernel.line(77)')
-				has_null = False
+					print('Wrong! in Kernel(#1)')
 				for each_mark in each_sequence:
-					if ((each_mark!='null') and (not each_mark in FIRST[each_nonterminal])):
-						FIRST[each_nonterminal].append(each_mark)
-						stop=False
-					if each_mark=='null':
-						has_null==True
-				if not has_null:
-					break
+					for each_marks_first in FIRST[each_mark]:
+						if ((each_marks_first!='null') and (not each_marks_first in FIRST[each_nonterminal])):
+							FIRST[each_nonterminal].append(each_marks_first)
+							stop=False
+					if not 'null' in FIRST[each_mark]:
+						break
+					else:
+						counter+=1
+					
+				#所有产生式的first集都有null，将null加入
+				if (counter==len(each_sequence) and (not 'null' in FIRST[each_nonterminal])):
+					FIRST[each_nonterminal].append('null')
+					stop=False
+					
+def getFollow():
+	global GRAMMER, NONTERMINAL, TERMINAL, FOLLOW
+	FOLLOW['program']=['$']
+	stop = False
+	while (not stop):
 
-			#所有产生式的first集都有null，将null加入
-			if (counter==len(GRAMMER.get(each_nonterminal,[])) and (not 'null' in FIRST[each_nonterminal])):
-				FIRST[each_nonterminal].append('null')
-				stop=False
+	
 
-	for each_nonterminal in NONTERMINAL:
-		print(each_nonterminal, FIRST[each_nonterminal])
 
 
 def main():
 	print('__in main__')
 	getFirst()
+	print('ans')
+	for each_nonterminal in NONTERMINAL:
+		print(each_nonterminal, FIRST[each_nonterminal])
 
 
 if __name__ == '__main__':
