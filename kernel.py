@@ -1,70 +1,21 @@
 #coding:utf-8
 
+# 测试小数据
+
 GRAMMER ={
-'program':[['function_statement','declare','function_defination']],
-'function_statement':[['null'],['type','id','params',';']],
-'function_defination':[['null'], ['type','id','params','function_body']],
-'type':[['void','char','byte','int','long','float','double']],
-'params':[['param','paramn'],['null']],
-'paramn':[['null'],[',','param','paramn']],
-'param':[['type','id']],
-'function_body':[['{','function_internal','}']],
-'function_internal':[['assign','function_internal'],
-					['expression','function_internal'],
-					['loop_expression','function_internal'],
-					['declare','function_internal'],
-					['function_statement','function_internal'],
-					['jump_signal','function_internal']],
-'declare':[['null'],['type','ids',';']],
-'ids':[['id','idN'],['id','=','constant','idN']],
-'idN':[[',','id','idN'],['null'],[',','id','constant','idN']],
-'assign':[['null'],['id','assign_idN','=','expression',';']],
-'assign_idN':[['null'],['=','id','assign_idN']],
-'function':[['id','(','params',')']],
-'constant':[['integer'],['decimal'],['char'],['string']],
-'expression':[['constant'],['function'],['id'],['single_expression'],['double_expression']],
-'single_expression':[['single_operator','expression'],['expression','single_operator']],
-'single_operator':[['!'],['^'],['&'],['++'],['--']],
-'double_expression':[['expression','double_operator','expression']],
-'double_operator':[['+'],['-'],['*'],['/'],['&&'],['||']],
-'loop_expression':[['for_expression'],['while_expression'],['do_expression']],
-'jump_signal':[['break',';'],['continue',';'],['goto','id',';'],['return',';'],['return','expression',';']],
-'for_expression':[['for','for_internal_expression',',','for_internal_expression',',','for_internal_expression',')','loop_body']],
-'for_internal_expression':[['null'],['expression']],
-'loop_body':[['{','loop_internal','}']],
-'loop_internal':[['assign','loop_internal'],
-				['expression','loop_internal'],
-				['loop_expression','loop_internal'],
-				['declare','loop_internal'],
-				['function_statement','loop_internal'],
-				['jump_signal','loop_internal']],
-'while_expression':[['while','(','expression',')','loop_body']],
-'do_expression':[['do','loop_expression','while','(','expression',')',';']],
-'if_expression':[['if','(','expression',')','if_internal','if_remain']],
-'if_remain':[['null'],['else','if_internal'],['else','if_expression']],
-'if_internal':[['assign','if_internal'],
-				['expression','if_internal'],
-				['loop_expression','if_internal'],
-				['declare','if_internal'],
-				['function_statement','if_internal'],
-				['jump_signal','if_internal']]
+'e':[['t','e\'']],
+'e\'':[['+','t','e\''],['null']],
+'t':[['f','t\'']],
+'t\'':[['*','f','t\''],['null']],
+'f':[['(','e',')'],['id']]
 }
 
-NONTERMINAL=['program','function_statement','function_defination','type',
-			'params','paramn','param','function_body','function_internal','declare',
-			'ids','idN','assign','assign_idN','function','constant','expression',
-			'single_expression','single_operator','double_expression','double_operator',
-			'loop_expression','jump_signal','for_expression','for_internal_expression',
-			'loop_body','loop_internal','while_expression','do_expression','if_expression',
-			'if_remain','if_internal'
-			]
-TERMINAL=['null','id',';','void','char','byte','shot','int','long','float','double',
-		',','=','integer','decimal','character','string','!','^','&','++','--','+','-','*','/',
-		'&&','||','{','}',',','(',')','break','continue','goto','return','for','while','do','if','else'
-		]
+NONTERMINAL=['e','e\'','t','t\'','f']
+TERMINAL=['id','+','*','(',')','$','null']
 
 FIRST={}
 FOLLOW={}
+PARSING_TABLE={}
 
 
 def getFirst():
@@ -113,7 +64,7 @@ def getFollow():
 	for each_nonterminal in NONTERMINAL:
 		FOLLOW[each_nonterminal] = []
 	
-	FOLLOW['program']=['$']
+	FOLLOW['e']=['$']
 
 	# 放入first集,第二步
 	for each_nonterminal in NONTERMINAL:
@@ -137,15 +88,57 @@ def getFollow():
 					if not 'null' in FIRST[each_sequence[i]]:
 						break;
 
+def get_parsing_table():
+	# 算法4.4
+	global FIRST, FOLLOW, PARSING_TABLE
+	# 初始化
+	for each_nonterminal in NONTERMINAL:
+		PARSING_TABLE[each_nonterminal]={}
+		for each_terminal in TERMINAL:
+			PARSING_TABLE[each_nonterminal][each_terminal]=-1
+
+
+	for each_nonterminal in NONTERMINAL:
+		for i in xrange(0,len(GRAMMER[each_nonterminal])):
+			counter = 0
+			for each_mark in GRAMMER[each_nonterminal][i]:
+				for each_marks_first in FIRST[each_mark]:
+					if PARSING_TABLE[each_nonterminal][each_marks_first]>0:
+						print('语法不是LL1')
+					else:
+						PARSING_TABLE[each_nonterminal][each_marks_first]=i
+				if not 'null' in FIRST[each_mark]:
+					break
+				else:
+					counter+=1
+			if counter==len(GRAMMER[each_nonterminal][i]):
+				for each_follow in FOLLOW[each_nonterminal]:
+					if each_follow in TERMINAL:
+						if PARSING_TABLE[each_nonterminal][each_follow]>0:
+							print('语法不是LL1')
+						else:
+							PARSING_TABLE[each_nonterminal][each_follow]=i
+
+
 def main():
 	print('__in main__')
 	getFirst()
 	getFollow()
-	for each_nonterminal in NONTERMINAL:
-		print(each_nonterminal, FOLLOW[each_nonterminal])
+	get_parsing_table()
 
-	for each_nonterminal in TERMINAL:
-		print(each_nonterminal, FOLLOW[each_nonterminal])
+	for each_nonterminal in NONTERMINAL:
+		print(each_nonterminal,FOLLOW[each_nonterminal])
+
+	s="   "
+	for each_terminal in TERMINAL:
+		s = s+each_terminal+"  "
+	print(s)
+	print('')
+	for each_nonterminal in NONTERMINAL:
+		s = each_nonterminal+"\t  "
+		for each_terminal in TERMINAL:
+			s = s+"\t\t"+str(PARSING_TABLE[each_nonterminal][each_terminal])
+		print(s)
 
 if __name__ == '__main__':
 	main()
