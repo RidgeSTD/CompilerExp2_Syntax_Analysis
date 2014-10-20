@@ -1,0 +1,1487 @@
+<program>	->	[Lambda]
+<program>	->	[;]<program>
+<program>	->	[struct]<197>
+<program>	->	[union]<197>
+<program>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier><198>
+<program>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier><198>
+<program>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier><198>
+<program>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier><198>
+<program>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier><198>
+<program>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier><198>
+<program>	->	[int]<data type modifier><pointer modifier><198>
+<program>	->	[float]<data type modifier><pointer modifier><198>
+<program>	->	[double]<data type modifier><pointer modifier><198>
+<program>	->	[char]<data type modifier><pointer modifier><198>
+<program>	->	[void]<data type modifier><pointer modifier><198>
+<program>	->	[long]<151><data type modifier><pointer modifier><198>
+<program>	->	[short]<152><data type modifier><pointer modifier><198>
+<statement>	->	[;]
+<statement>	->	[struct]<196>
+<statement>	->	[union]<196>
+<statement>	->	[short]<152><data type modifier><pointer modifier><199>
+<statement>	->	[long]<151><data type modifier><pointer modifier><199>
+<statement>	->	[void]<data type modifier><pointer modifier><199>
+<statement>	->	[char]<data type modifier><pointer modifier><199>
+<statement>	->	[double]<data type modifier><pointer modifier><199>
+<statement>	->	[float]<data type modifier><pointer modifier><199>
+<statement>	->	[int]<data type modifier><pointer modifier><199>
+<statement>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier><199>
+<statement>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier><199>
+<statement>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier><199>
+<statement>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier><199>
+<statement>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier><199>
+<statement>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier><199>
+<function statement>	->	[struct]<150><data type modifier><pointer modifier>[IDN][(]<formal parameter list>[)]<function tail>
+<function statement>	->	[union]<150><data type modifier><pointer modifier>[IDN][(]<formal parameter list>[)]<function tail>
+<function statement>	->	[short]<152><data type modifier><pointer modifier>[IDN][(]<formal parameter list>[)]<function tail>
+<function statement>	->	[long]<151><data type modifier><pointer modifier>[IDN][(]<formal parameter list>[)]<function tail>
+<function statement>	->	[void]<data type modifier><pointer modifier>[IDN][(]<formal parameter list>[)]<function tail>
+<function statement>	->	[char]<data type modifier><pointer modifier>[IDN][(]<formal parameter list>[)]<function tail>
+<function statement>	->	[double]<data type modifier><pointer modifier>[IDN][(]<formal parameter list>[)]<function tail>
+<function statement>	->	[float]<data type modifier><pointer modifier>[IDN][(]<formal parameter list>[)]<function tail>
+<function statement>	->	[int]<data type modifier><pointer modifier>[IDN][(]<formal parameter list>[)]<function tail>
+<function statement>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>[IDN][(]<formal parameter list>[)]<function tail>
+<function statement>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>[IDN][(]<formal parameter list>[)]<function tail>
+<function statement>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>[IDN][(]<formal parameter list>[)]<function tail>
+<function statement>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>[IDN][(]<formal parameter list>[)]<function tail>
+<function statement>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>[IDN][(]<formal parameter list>[)]<function tail>
+<function statement>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>[IDN][(]<formal parameter list>[)]<function tail>
+<variable statement>	->	[struct]<150><data type modifier><pointer modifier><variable list>[;]
+<variable statement>	->	[union]<150><data type modifier><pointer modifier><variable list>[;]
+<variable statement>	->	[short]<152><data type modifier><pointer modifier><variable list>[;]
+<variable statement>	->	[long]<151><data type modifier><pointer modifier><variable list>[;]
+<variable statement>	->	[void]<data type modifier><pointer modifier><variable list>[;]
+<variable statement>	->	[char]<data type modifier><pointer modifier><variable list>[;]
+<variable statement>	->	[double]<data type modifier><pointer modifier><variable list>[;]
+<variable statement>	->	[float]<data type modifier><pointer modifier><variable list>[;]
+<variable statement>	->	[int]<data type modifier><pointer modifier><variable list>[;]
+<variable statement>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]
+<variable statement>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]
+<variable statement>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]
+<variable statement>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]
+<variable statement>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]
+<variable statement>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]
+<data type definition>	->	[union]<data type definition name>[{]<struct inner>[}][;]
+<data type definition>	->	[struct]<data type definition name>[{]<struct inner>[}][;]
+<data type>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>
+<data type>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>
+<data type>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>
+<data type>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>
+<data type>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>
+<data type>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>
+<data type>	->	[int]<data type modifier><pointer modifier>
+<data type>	->	[float]<data type modifier><pointer modifier>
+<data type>	->	[double]<data type modifier><pointer modifier>
+<data type>	->	[char]<data type modifier><pointer modifier>
+<data type>	->	[void]<data type modifier><pointer modifier>
+<data type>	->	[long]<151><data type modifier><pointer modifier>
+<data type>	->	[short]<152><data type modifier><pointer modifier>
+<data type>	->	[union]<150><data type modifier><pointer modifier>
+<data type>	->	[struct]<150><data type modifier><pointer modifier>
+<formal parameter list>	->	[Lambda]
+<formal parameter list>	->	[struct]<150><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<formal parameter list>	->	[union]<150><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<formal parameter list>	->	[short]<152><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<formal parameter list>	->	[long]<151><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<formal parameter list>	->	[char]<data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<formal parameter list>	->	[double]<data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<formal parameter list>	->	[float]<data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<formal parameter list>	->	[int]<data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<formal parameter list>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<formal parameter list>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<formal parameter list>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<formal parameter list>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<formal parameter list>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<formal parameter list>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<formal parameter list>	->	[void]<207>
+<function tail>	->	[;]
+<function tail>	->	[{]<program body>[}]
+<block>	->	[{]<program body>[}]
+<variable list>	->	[IDN]<array tail><single variable tail><variable list tail>
+<data type modifier>	->	[unsigned]<data type modifier>
+<data type modifier>	->	[signed]<data type modifier>
+<data type modifier>	->	[const]<data type modifier>
+<data type modifier>	->	[extern]<data type modifier>
+<data type modifier>	->	[static]<data type modifier>
+<data type modifier>	->	[auto]<data type modifier>
+<data type modifier>	->	[Lambda]
+<data type body>	->	[struct]<150>
+<data type body>	->	[union]<150>
+<data type body>	->	[short]<152>
+<data type body>	->	[long]<151>
+<data type body>	->	[void]
+<data type body>	->	[char]
+<data type body>	->	[double]
+<data type body>	->	[float]
+<data type body>	->	[int]
+<pointer modifier>	->	[*]<const modifier><pointer modifier>
+<pointer modifier>	->	[Lambda]
+<base data type>	->	[int]
+<base data type>	->	[float]
+<base data type>	->	[double]
+<base data type>	->	[char]
+<base data type>	->	[void]
+<base data type>	->	[long]<151>
+<base data type>	->	[short]<152>
+<user defined data type>	->	[union]<150>
+<user defined data type>	->	[struct]<150>
+<const modifier>	->	[const]<const modifier>
+<const modifier>	->	[Lambda]
+<struct or union>	->	[struct]
+<struct or union>	->	[union]
+<data type definition name>	->	[IDN]
+<data type definition name>	->	[Lambda]
+<struct inner>	->	[Lambda]
+<struct inner>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]<struct inner>
+<struct inner>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]<struct inner>
+<struct inner>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]<struct inner>
+<struct inner>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]<struct inner>
+<struct inner>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]<struct inner>
+<struct inner>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]<struct inner>
+<struct inner>	->	[int]<data type modifier><pointer modifier><variable list>[;]<struct inner>
+<struct inner>	->	[float]<data type modifier><pointer modifier><variable list>[;]<struct inner>
+<struct inner>	->	[double]<data type modifier><pointer modifier><variable list>[;]<struct inner>
+<struct inner>	->	[char]<data type modifier><pointer modifier><variable list>[;]<struct inner>
+<struct inner>	->	[void]<data type modifier><pointer modifier><variable list>[;]<struct inner>
+<struct inner>	->	[long]<151><data type modifier><pointer modifier><variable list>[;]<struct inner>
+<struct inner>	->	[short]<152><data type modifier><pointer modifier><variable list>[;]<struct inner>
+<struct inner>	->	[struct]<206>
+<struct inner>	->	[union]<206>
+<single variable>	->	[IDN]<array tail><single variable tail>
+<variable list tail>	->	[,]<pointer modifier><variable list>
+<variable list tail>	->	[Lambda]
+<array tail>	->	[[]<const value>[]]<array tail>
+<array tail>	->	[Lambda]
+<single variable tail>	->	[=]<single variable init>
+<single variable tail>	->	[Lambda]
+<const value>	->	[INUM]
+<const value>	->	[FNUM]
+<const value>	->	[CH]
+<const value>	->	[STR]
+<single variable init>	->	[{]<149>
+<single variable init>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166>
+<single variable init>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166>
+<single variable init>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166>
+<single variable init>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166>
+<single variable init>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166>
+<single variable init>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166>
+<single variable init>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166>
+<single variable init>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166>
+<single variable init>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166>
+<single variable init>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166>
+<single variable init>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166>
+<single variable init>	->	[IDN]<182>
+<single variable init>	->	[(]<180>
+<single variable init>	->	[STR]<181>
+<single variable init tail>	->	[,]<single variable init><single variable init tail>
+<single variable init tail>	->	[Lambda]
+<A>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166>
+<A>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166>
+<A>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166>
+<A>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166>
+<A>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166>
+<A>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166>
+<A>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166>
+<A>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166>
+<A>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166>
+<A>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166>
+<A>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166>
+<A>	->	[STR]<181>
+<A>	->	[(]<180>
+<A>	->	[IDN]<182>
+<array in parameter>	->	[Lambda]
+<array in parameter>	->	[[]<148>
+<formal parameter list tail>	->	[Lambda]
+<formal parameter list tail>	->	[,]<147>
+<program body>	->	[Lambda]
+<program body>	->	[{]<program body>[}]<program body>
+<program body>	->	[short]<152><data type modifier><pointer modifier><variable list>[;]<program body>
+<program body>	->	[long]<151><data type modifier><pointer modifier><variable list>[;]<program body>
+<program body>	->	[void]<data type modifier><pointer modifier><variable list>[;]<program body>
+<program body>	->	[char]<data type modifier><pointer modifier><variable list>[;]<program body>
+<program body>	->	[double]<data type modifier><pointer modifier><variable list>[;]<program body>
+<program body>	->	[float]<data type modifier><pointer modifier><variable list>[;]<program body>
+<program body>	->	[int]<data type modifier><pointer modifier><variable list>[;]<program body>
+<program body>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]<program body>
+<program body>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]<program body>
+<program body>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]<program body>
+<program body>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]<program body>
+<program body>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]<program body>
+<program body>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]<program body>
+<program body>	->	[IDN]<195><program body>
+<program body>	->	[;]<program body>
+<program body>	->	[for][(]<normal expr>[;]<normal expr>[;]<normal expr>[)]<loop tail><program body>
+<program body>	->	[while][(]<normal expr>[)]<loop tail><program body>
+<program body>	->	[do]<block>[while]<normal expr>[;]<program body>
+<program body>	->	[if][(]<normal expr>[)]<loop tail><if tail><program body>
+<program body>	->	[switch][(]<normal expr>[)][{]<case sentence>[}]<program body>
+<program body>	->	[goto][IDN][;]<program body>
+<program body>	->	[break][;]<program body>
+<program body>	->	[continue][;]<program body>
+<program body>	->	[return]<146><program body>
+<program body>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]<program body>
+<program body>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]<program body>
+<program body>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]<program body>
+<program body>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]<program body>
+<program body>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]<program body>
+<program body>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]<program body>
+<program body>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]<program body>
+<program body>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[;]<program body>
+<program body>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[;]<program body>
+<program body>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[;]<program body>
+<program body>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[;]<program body>
+<program body>	->	[STR]<181><167>[;]<program body>
+<program body>	->	[(]<180><167>[;]<program body>
+<program body>	->	[struct]<205>
+<program body>	->	[union]<205>
+<program statement>	->	[(]<180><167>[;]
+<program statement>	->	[STR]<181><167>[;]
+<program statement>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<program statement>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<program statement>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<program statement>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<program statement>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<program statement>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<program statement>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<program statement>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<program statement>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<program statement>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<program statement>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<program statement>	->	[return]<146>
+<program statement>	->	[continue][;]
+<program statement>	->	[break][;]
+<program statement>	->	[goto][IDN][;]
+<program statement>	->	[switch][(]<normal expr>[)][{]<case sentence>[}]
+<program statement>	->	[if][(]<normal expr>[)]<loop tail><if tail>
+<program statement>	->	[do]<block>[while]<normal expr>[;]
+<program statement>	->	[while][(]<normal expr>[)]<loop tail>
+<program statement>	->	[for][(]<normal expr>[;]<normal expr>[;]<normal expr>[)]<loop tail>
+<program statement>	->	[;]
+<program statement>	->	[IDN]<195>
+<program statement>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]
+<program statement>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]
+<program statement>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]
+<program statement>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]
+<program statement>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]
+<program statement>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier><variable list>[;]
+<program statement>	->	[int]<data type modifier><pointer modifier><variable list>[;]
+<program statement>	->	[float]<data type modifier><pointer modifier><variable list>[;]
+<program statement>	->	[double]<data type modifier><pointer modifier><variable list>[;]
+<program statement>	->	[char]<data type modifier><pointer modifier><variable list>[;]
+<program statement>	->	[void]<data type modifier><pointer modifier><variable list>[;]
+<program statement>	->	[long]<151><data type modifier><pointer modifier><variable list>[;]
+<program statement>	->	[short]<152><data type modifier><pointer modifier><variable list>[;]
+<program statement>	->	[struct]<204>
+<program statement>	->	[union]<204>
+<run statement>	->	[;]
+<run statement>	->	[for][(]<normal expr>[;]<normal expr>[;]<normal expr>[)]<loop tail>
+<run statement>	->	[while][(]<normal expr>[)]<loop tail>
+<run statement>	->	[do]<block>[while]<normal expr>[;]
+<run statement>	->	[if][(]<normal expr>[)]<loop tail><if tail>
+<run statement>	->	[switch][(]<normal expr>[)][{]<case sentence>[}]
+<run statement>	->	[goto][IDN][;]
+<run statement>	->	[break][;]
+<run statement>	->	[continue][;]
+<run statement>	->	[return]<146>
+<run statement>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<run statement>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<run statement>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<run statement>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<run statement>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<run statement>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<run statement>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<run statement>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<run statement>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<run statement>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<run statement>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<run statement>	->	[STR]<181><167>[;]
+<run statement>	->	[(]<180><167>[;]
+<run statement>	->	[IDN]<195>
+<normal expr>	->	[IDN]<182><167>
+<normal expr>	->	[(]<180><167>
+<normal expr>	->	[STR]<181><167>
+<normal expr>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>
+<normal expr>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>
+<normal expr>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>
+<normal expr>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>
+<normal expr>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>
+<normal expr>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>
+<normal expr>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>
+<normal expr>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>
+<normal expr>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>
+<normal expr>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>
+<normal expr>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>
+<loop tail>	->	[{]<program body>[}]
+<loop tail>	->	[IDN]<195>
+<loop tail>	->	[(]<180><167>[;]
+<loop tail>	->	[STR]<181><167>[;]
+<loop tail>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<loop tail>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<loop tail>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<loop tail>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<loop tail>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<loop tail>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<loop tail>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<loop tail>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<loop tail>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<loop tail>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<loop tail>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<loop tail>	->	[return]<146>
+<loop tail>	->	[continue][;]
+<loop tail>	->	[break][;]
+<loop tail>	->	[goto][IDN][;]
+<loop tail>	->	[switch][(]<normal expr>[)][{]<case sentence>[}]
+<loop tail>	->	[if][(]<normal expr>[)]<loop tail><if tail>
+<loop tail>	->	[do]<block>[while]<normal expr>[;]
+<loop tail>	->	[while][(]<normal expr>[)]<loop tail>
+<loop tail>	->	[for][(]<normal expr>[;]<normal expr>[;]<normal expr>[)]<loop tail>
+<loop tail>	->	[;]
+<if tail>	->	[else]<loop tail>
+<if tail>	->	[Lambda]
+<case sentence>	->	[Lambda]
+<case sentence>	->	[case]<case const value>[:]<run sentences><case sentence>
+<case sentence>	->	[default][:]<run sentences><case sentence>
+<case const value>	->	[INUM]
+<case const value>	->	[CH]
+<run sentences>	->	[Lambda]
+<run sentences>	->	[;]<run sentences>
+<run sentences>	->	[for][(]<normal expr>[;]<normal expr>[;]<normal expr>[)]<loop tail><run sentences>
+<run sentences>	->	[while][(]<normal expr>[)]<loop tail><run sentences>
+<run sentences>	->	[do]<block>[while]<normal expr>[;]<run sentences>
+<run sentences>	->	[if][(]<normal expr>[)]<loop tail><if tail><run sentences>
+<run sentences>	->	[switch][(]<normal expr>[)][{]<case sentence>[}]<run sentences>
+<run sentences>	->	[goto][IDN][;]<run sentences>
+<run sentences>	->	[break][;]<run sentences>
+<run sentences>	->	[continue][;]<run sentences>
+<run sentences>	->	[return]<146><run sentences>
+<run sentences>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]<run sentences>
+<run sentences>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]<run sentences>
+<run sentences>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]<run sentences>
+<run sentences>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]<run sentences>
+<run sentences>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]<run sentences>
+<run sentences>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]<run sentences>
+<run sentences>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]<run sentences>
+<run sentences>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[;]<run sentences>
+<run sentences>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[;]<run sentences>
+<run sentences>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[;]<run sentences>
+<run sentences>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[;]<run sentences>
+<run sentences>	->	[STR]<181><167>[;]<run sentences>
+<run sentences>	->	[(]<180><167>[;]<run sentences>
+<run sentences>	->	[IDN]<195><run sentences>
+<run sentences>	->	[{]<program body>[}]<run sentences>
+<sim14>	->	[=]
+<sim14>	->	[+=]
+<sim14>	->	[-=]
+<sim14>	->	[*=]
+<sim14>	->	[/=]
+<sim14>	->	[%=]
+<sim14>	->	[|=]
+<sim14>	->	[&=]
+<sim14>	->	[^=]
+<sim14>	->	[<<=]
+<sim14>	->	[>>=]
+<B>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166>
+<B>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166>
+<B>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166>
+<B>	->	[IDN]<may call func><155><145><156><157><158><159><160><161><162><163><164><165><166>
+<B>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166>
+<B>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166>
+<B>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166>
+<B>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166>
+<B>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166>
+<B>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166>
+<B>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166>
+<B>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166>
+<B>	->	[(]<180>
+<B>	->	[STR]<181>
+<C>	->	[!]<M><156><157><158><159><160><161><162><163><164><165>
+<C>	->	[~]<M><156><157><158><159><160><161><162><163><164><165>
+<C>	->	[-]<M><156><157><158><159><160><161><162><163><164><165>
+<C>	->	[*]<N><156><157><158><159><160><161><162><163><164><165>
+<C>	->	[&]<N><156><157><158><159><160><161><162><163><164><165>
+<C>	->	[++]<N><156><157><158><159><160><161><162><163><164><165>
+<C>	->	[--]<N><156><157><158><159><160><161><162><163><164><165>
+<C>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165>
+<C>	->	[IDN]<may call func><155><145><156><157><158><159><160><161><162><163><164><165>
+<C>	->	[CH]<156><157><158><159><160><161><162><163><164><165>
+<C>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165>
+<C>	->	[INUM]<156><157><158><159><160><161><162><163><164><165>
+<C>	->	[STR]<179>
+<C>	->	[(]<193>
+<D>	->	[INUM]<156><157><158><159><160><161><162><163><164>
+<D>	->	[FNUM]<156><157><158><159><160><161><162><163><164>
+<D>	->	[CH]<156><157><158><159><160><161><162><163><164>
+<D>	->	[IDN]<may call func><155><145><156><157><158><159><160><161><162><163><164>
+<D>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164>
+<D>	->	[--]<N><156><157><158><159><160><161><162><163><164>
+<D>	->	[++]<N><156><157><158><159><160><161><162><163><164>
+<D>	->	[&]<N><156><157><158><159><160><161><162><163><164>
+<D>	->	[*]<N><156><157><158><159><160><161><162><163><164>
+<D>	->	[-]<M><156><157><158><159><160><161><162><163><164>
+<D>	->	[~]<M><156><157><158><159><160><161><162><163><164>
+<D>	->	[!]<M><156><157><158><159><160><161><162><163><164>
+<D>	->	[(]<178>
+<D>	->	[STR]<192>
+<E>	->	[!]<M><156><157><158><159><160><161><162><163>
+<E>	->	[~]<M><156><157><158><159><160><161><162><163>
+<E>	->	[-]<M><156><157><158><159><160><161><162><163>
+<E>	->	[*]<N><156><157><158><159><160><161><162><163>
+<E>	->	[&]<N><156><157><158><159><160><161><162><163>
+<E>	->	[++]<N><156><157><158><159><160><161><162><163>
+<E>	->	[--]<N><156><157><158><159><160><161><162><163>
+<E>	->	[sizeof]<153><156><157><158><159><160><161><162><163>
+<E>	->	[IDN]<may call func><155><145><156><157><158><159><160><161><162><163>
+<E>	->	[CH]<156><157><158><159><160><161><162><163>
+<E>	->	[FNUM]<156><157><158><159><160><161><162><163>
+<E>	->	[INUM]<156><157><158><159><160><161><162><163>
+<E>	->	[STR]<177>
+<E>	->	[(]<191>
+<F>	->	[INUM]<156><157><158><159><160><161><162>
+<F>	->	[FNUM]<156><157><158><159><160><161><162>
+<F>	->	[CH]<156><157><158><159><160><161><162>
+<F>	->	[IDN]<may call func><155><145><156><157><158><159><160><161><162>
+<F>	->	[sizeof]<153><156><157><158><159><160><161><162>
+<F>	->	[--]<N><156><157><158><159><160><161><162>
+<F>	->	[++]<N><156><157><158><159><160><161><162>
+<F>	->	[&]<N><156><157><158><159><160><161><162>
+<F>	->	[*]<N><156><157><158><159><160><161><162>
+<F>	->	[-]<M><156><157><158><159><160><161><162>
+<F>	->	[~]<M><156><157><158><159><160><161><162>
+<F>	->	[!]<M><156><157><158><159><160><161><162>
+<F>	->	[(]<176>
+<F>	->	[STR]<190>
+<G>	->	[!]<M><156><157><158><159><160><161>
+<G>	->	[~]<M><156><157><158><159><160><161>
+<G>	->	[-]<M><156><157><158><159><160><161>
+<G>	->	[*]<N><156><157><158><159><160><161>
+<G>	->	[&]<N><156><157><158><159><160><161>
+<G>	->	[++]<N><156><157><158><159><160><161>
+<G>	->	[--]<N><156><157><158><159><160><161>
+<G>	->	[sizeof]<153><156><157><158><159><160><161>
+<G>	->	[IDN]<may call func><155><145><156><157><158><159><160><161>
+<G>	->	[CH]<156><157><158><159><160><161>
+<G>	->	[FNUM]<156><157><158><159><160><161>
+<G>	->	[INUM]<156><157><158><159><160><161>
+<G>	->	[STR]<175>
+<G>	->	[(]<189>
+<H>	->	[INUM]<156><157><158><159><160>
+<H>	->	[FNUM]<156><157><158><159><160>
+<H>	->	[CH]<156><157><158><159><160>
+<H>	->	[IDN]<may call func><155><145><156><157><158><159><160>
+<H>	->	[sizeof]<153><156><157><158><159><160>
+<H>	->	[--]<N><156><157><158><159><160>
+<H>	->	[++]<N><156><157><158><159><160>
+<H>	->	[&]<N><156><157><158><159><160>
+<H>	->	[*]<N><156><157><158><159><160>
+<H>	->	[-]<M><156><157><158><159><160>
+<H>	->	[~]<M><156><157><158><159><160>
+<H>	->	[!]<M><156><157><158><159><160>
+<H>	->	[(]<174>
+<H>	->	[STR]<188>
+<sim7>	->	[==]
+<sim7>	->	[!=]
+<I>	->	[!]<M><156><157><158><159>
+<I>	->	[~]<M><156><157><158><159>
+<I>	->	[-]<M><156><157><158><159>
+<I>	->	[*]<N><156><157><158><159>
+<I>	->	[&]<N><156><157><158><159>
+<I>	->	[++]<N><156><157><158><159>
+<I>	->	[--]<N><156><157><158><159>
+<I>	->	[sizeof]<153><156><157><158><159>
+<I>	->	[IDN]<may call func><155><145><156><157><158><159>
+<I>	->	[CH]<156><157><158><159>
+<I>	->	[FNUM]<156><157><158><159>
+<I>	->	[INUM]<156><157><158><159>
+<I>	->	[STR]<173>
+<I>	->	[(]<187>
+<sim6>	->	[<]
+<sim6>	->	[<=]
+<sim6>	->	[>]
+<sim6>	->	[>=]
+<J>	->	[INUM]<156><157><158>
+<J>	->	[FNUM]<156><157><158>
+<J>	->	[CH]<156><157><158>
+<J>	->	[IDN]<may call func><155><145><156><157><158>
+<J>	->	[sizeof]<153><156><157><158>
+<J>	->	[--]<N><156><157><158>
+<J>	->	[++]<N><156><157><158>
+<J>	->	[&]<N><156><157><158>
+<J>	->	[*]<N><156><157><158>
+<J>	->	[-]<M><156><157><158>
+<J>	->	[~]<M><156><157><158>
+<J>	->	[!]<M><156><157><158>
+<J>	->	[(]<172>
+<J>	->	[STR]<186>
+<sim5>	->	[<<]
+<sim5>	->	[>>]
+<K>	->	[!]<M><156><157>
+<K>	->	[~]<M><156><157>
+<K>	->	[-]<M><156><157>
+<K>	->	[*]<N><156><157>
+<K>	->	[&]<N><156><157>
+<K>	->	[++]<N><156><157>
+<K>	->	[--]<N><156><157>
+<K>	->	[sizeof]<153><156><157>
+<K>	->	[IDN]<may call func><155><145><156><157>
+<K>	->	[CH]<156><157>
+<K>	->	[FNUM]<156><157>
+<K>	->	[INUM]<156><157>
+<K>	->	[STR]<171>
+<K>	->	[(]<185>
+<sim4>	->	[+]
+<sim4>	->	[-]
+<L>	->	[INUM]<156>
+<L>	->	[FNUM]<156>
+<L>	->	[CH]<156>
+<L>	->	[IDN]<may call func><155><145><156>
+<L>	->	[sizeof]<153><156>
+<L>	->	[--]<N><156>
+<L>	->	[++]<N><156>
+<L>	->	[&]<N><156>
+<L>	->	[*]<N><156>
+<L>	->	[-]<M><156>
+<L>	->	[~]<M><156>
+<L>	->	[!]<M><156>
+<L>	->	[(]<170>
+<L>	->	[STR]<184>
+<sim3>	->	[*]
+<sim3>	->	[/]
+<sim3>	->	[%]
+<M>	->	[!]<M>
+<M>	->	[~]<M>
+<M>	->	[-]<M>
+<M>	->	[*]<N>
+<M>	->	[&]<N>
+<M>	->	[++]<N>
+<M>	->	[--]<N>
+<M>	->	[sizeof]<153>
+<M>	->	[IDN]<may call func><155><145>
+<M>	->	[CH]
+<M>	->	[FNUM]
+<M>	->	[INUM]
+<M>	->	[STR]<169>
+<M>	->	[(]<183>
+<N>	->	[(]<normal expr>[)]<155>
+<N>	->	[IDN]<may call func><155>
+<N>	->	[STR][[]<normal expr>[]]<155>
+<may call func>	->	[(]<actual argument list>[)]
+<may call func>	->	[Lambda]
+<actual argument list>	->	[Lambda]
+<actual argument list>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>
+<actual argument list>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>
+<actual argument list>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>
+<actual argument list>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>
+<actual argument list>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>
+<actual argument list>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>
+<actual argument list>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>
+<actual argument list>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>
+<actual argument list>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>
+<actual argument list>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>
+<actual argument list>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>
+<actual argument list>	->	[STR]<181><167>
+<actual argument list>	->	[(]<180><167>
+<actual argument list>	->	[IDN]<182><167>
+<144>	->	[[]<normal expr>[]]
+<144>	->	[->][IDN]
+<144>	->	[.][IDN]
+<145>	->	[++]
+<145>	->	[--]
+<145>	->	[Lambda]
+<146>	->	[;]
+<146>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<146>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<146>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<146>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<146>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<146>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<146>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<146>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<146>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<146>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<146>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<146>	->	[STR]<181><167>[;]
+<146>	->	[(]<180><167>[;]
+<146>	->	[IDN]<182><167>[;]
+<147>	->	[.][.][.]
+<147>	->	[struct]<150><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<147>	->	[union]<150><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<147>	->	[short]<152><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<147>	->	[long]<151><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<147>	->	[void]<data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<147>	->	[char]<data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<147>	->	[double]<data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<147>	->	[float]<data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<147>	->	[int]<data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<147>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<147>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<147>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<147>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<147>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<147>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<148>	->	[]]
+<148>	->	[STR][]]<array in parameter>
+<148>	->	[CH][]]<array in parameter>
+<148>	->	[FNUM][]]<array in parameter>
+<148>	->	[INUM][]]<array in parameter>
+<149>	->	[}]
+<149>	->	[STR]<181><single variable init tail>[}]
+<149>	->	[(]<180><single variable init tail>[}]
+<149>	->	[IDN]<182><single variable init tail>[}]
+<149>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><single variable init tail>[}]
+<149>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><single variable init tail>[}]
+<149>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><single variable init tail>[}]
+<149>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><single variable init tail>[}]
+<149>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><single variable init tail>[}]
+<149>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><single variable init tail>[}]
+<149>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><single variable init tail>[}]
+<149>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><single variable init tail>[}]
+<149>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><single variable init tail>[}]
+<149>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><single variable init tail>[}]
+<149>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><single variable init tail>[}]
+<149>	->	[{]<149><single variable init tail>[}]
+<150>	->	[{]<struct inner>[}]
+<150>	->	[IDN]<168>
+<151>	->	[Lambda]
+<151>	->	[int]
+<151>	->	[double]
+<151>	->	[long]<152>
+<152>	->	[Lambda]
+<152>	->	[int]
+<153>	->	[STR]<169>
+<153>	->	[INUM]
+<153>	->	[FNUM]
+<153>	->	[CH]
+<153>	->	[IDN]<may call func><155><145>
+<153>	->	[sizeof]<153>
+<153>	->	[--]<N>
+<153>	->	[++]<N>
+<153>	->	[&]<N>
+<153>	->	[*]<N>
+<153>	->	[-]<M>
+<153>	->	[~]<M>
+<153>	->	[!]<M>
+<153>	->	[(]<194>
+<154>	->	[struct]<150><data type modifier><pointer modifier>[)]
+<154>	->	[union]<150><data type modifier><pointer modifier>[)]
+<154>	->	[short]<152><data type modifier><pointer modifier>[)]
+<154>	->	[long]<151><data type modifier><pointer modifier>[)]
+<154>	->	[void]<data type modifier><pointer modifier>[)]
+<154>	->	[char]<data type modifier><pointer modifier>[)]
+<154>	->	[double]<data type modifier><pointer modifier>[)]
+<154>	->	[float]<data type modifier><pointer modifier>[)]
+<154>	->	[int]<data type modifier><pointer modifier>[)]
+<154>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>[)]
+<154>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>[)]
+<154>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>[)]
+<154>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>[)]
+<154>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>[)]
+<154>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>[)]
+<154>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]
+<154>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]
+<154>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]
+<154>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]
+<154>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]
+<154>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]
+<154>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]
+<154>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[)]
+<154>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[)]
+<154>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]
+<154>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]
+<154>	->	[STR]<181><167>[)]
+<154>	->	[(]<180><167>[)]
+<154>	->	[IDN]<182><167>[)]
+<155>	->	[Lambda]
+<155>	->	[.][IDN]<155>
+<155>	->	[->][IDN]<155>
+<155>	->	[[]<normal expr>[]]<155>
+<156>	->	[Lambda]
+<156>	->	[%]<M><156>
+<156>	->	[/]<M><156>
+<156>	->	[*]<M><156>
+<157>	->	[Lambda]
+<157>	->	[-]<L><157>
+<157>	->	[+]<L><157>
+<158>	->	[Lambda]
+<158>	->	[>>]<K><158>
+<158>	->	[<<]<K><158>
+<159>	->	[Lambda]
+<159>	->	[>=]<J><159>
+<159>	->	[>]<J><159>
+<159>	->	[<=]<J><159>
+<159>	->	[<]<J><159>
+<160>	->	[Lambda]
+<160>	->	[!=]<I><160>
+<160>	->	[==]<I><160>
+<161>	->	[&]<H><161>
+<161>	->	[Lambda]
+<162>	->	[^]<G><162>
+<162>	->	[Lambda]
+<163>	->	[|]<F><163>
+<163>	->	[Lambda]
+<164>	->	[&&]<E><164>
+<164>	->	[Lambda]
+<165>	->	[||]<D><165>
+<165>	->	[Lambda]
+<166>	->	[?]<B>[:]<B><166>
+<166>	->	[Lambda]
+<167>	->	[,]<A><167>
+<167>	->	[Lambda]
+<168>	->	[Lambda]
+<168>	->	[{]<struct inner>[}]
+<169>	->	[[]<normal expr>[]]<155><145>
+<169>	->	[Lambda]
+<170>	->	[struct]<150><data type modifier><pointer modifier>[)]<M><156>
+<170>	->	[union]<150><data type modifier><pointer modifier>[)]<M><156>
+<170>	->	[short]<152><data type modifier><pointer modifier>[)]<M><156>
+<170>	->	[long]<151><data type modifier><pointer modifier>[)]<M><156>
+<170>	->	[void]<data type modifier><pointer modifier>[)]<M><156>
+<170>	->	[char]<data type modifier><pointer modifier>[)]<M><156>
+<170>	->	[double]<data type modifier><pointer modifier>[)]<M><156>
+<170>	->	[float]<data type modifier><pointer modifier>[)]<M><156>
+<170>	->	[int]<data type modifier><pointer modifier>[)]<M><156>
+<170>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156>
+<170>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156>
+<170>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156>
+<170>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156>
+<170>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156>
+<170>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156>
+<170>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156>
+<170>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156>
+<170>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156>
+<170>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156>
+<170>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156>
+<170>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156>
+<170>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156>
+<170>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156>
+<170>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156>
+<170>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156>
+<170>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156>
+<170>	->	[STR]<181><167>[)]<155><145><156>
+<170>	->	[(]<180><167>[)]<155><145><156>
+<170>	->	[IDN]<182><167>[)]<155><145><156>
+<171>	->	[[]<normal expr>[]]<155><145><156><157>
+<171>	->	[Lambda]
+<171>	->	[*]<M><156><157>
+<171>	->	[/]<M><156><157>
+<171>	->	[%]<M><156><157>
+<171>	->	[+]<L><157>
+<171>	->	[-]<L><157>
+<172>	->	[struct]<150><data type modifier><pointer modifier>[)]<M><156><157><158>
+<172>	->	[union]<150><data type modifier><pointer modifier>[)]<M><156><157><158>
+<172>	->	[short]<152><data type modifier><pointer modifier>[)]<M><156><157><158>
+<172>	->	[long]<151><data type modifier><pointer modifier>[)]<M><156><157><158>
+<172>	->	[void]<data type modifier><pointer modifier>[)]<M><156><157><158>
+<172>	->	[char]<data type modifier><pointer modifier>[)]<M><156><157><158>
+<172>	->	[double]<data type modifier><pointer modifier>[)]<M><156><157><158>
+<172>	->	[float]<data type modifier><pointer modifier>[)]<M><156><157><158>
+<172>	->	[int]<data type modifier><pointer modifier>[)]<M><156><157><158>
+<172>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158>
+<172>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158>
+<172>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158>
+<172>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158>
+<172>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158>
+<172>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158>
+<172>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158>
+<172>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158>
+<172>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158>
+<172>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158>
+<172>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158>
+<172>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158>
+<172>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158>
+<172>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158>
+<172>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158>
+<172>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158>
+<172>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158>
+<172>	->	[STR]<181><167>[)]<155><145><156><157><158>
+<172>	->	[(]<180><167>[)]<155><145><156><157><158>
+<172>	->	[IDN]<182><167>[)]<155><145><156><157><158>
+<173>	->	[[]<normal expr>[]]<155><145><156><157><158><159>
+<173>	->	[Lambda]
+<173>	->	[*]<M><156><157><158><159>
+<173>	->	[/]<M><156><157><158><159>
+<173>	->	[%]<M><156><157><158><159>
+<173>	->	[+]<L><157><158><159>
+<173>	->	[-]<L><157><158><159>
+<173>	->	[<<]<K><158><159>
+<173>	->	[>>]<K><158><159>
+<173>	->	[<]<J><159>
+<173>	->	[<=]<J><159>
+<173>	->	[>]<J><159>
+<173>	->	[>=]<J><159>
+<174>	->	[struct]<150><data type modifier><pointer modifier>[)]<M><156><157><158><159><160>
+<174>	->	[union]<150><data type modifier><pointer modifier>[)]<M><156><157><158><159><160>
+<174>	->	[short]<152><data type modifier><pointer modifier>[)]<M><156><157><158><159><160>
+<174>	->	[long]<151><data type modifier><pointer modifier>[)]<M><156><157><158><159><160>
+<174>	->	[void]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160>
+<174>	->	[char]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160>
+<174>	->	[double]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160>
+<174>	->	[float]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160>
+<174>	->	[int]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160>
+<174>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160>
+<174>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160>
+<174>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160>
+<174>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160>
+<174>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160>
+<174>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160>
+<174>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160>
+<174>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160>
+<174>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160>
+<174>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160>
+<174>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160>
+<174>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160>
+<174>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160>
+<174>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160>
+<174>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160>
+<174>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160>
+<174>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160>
+<174>	->	[STR]<181><167>[)]<155><145><156><157><158><159><160>
+<174>	->	[(]<180><167>[)]<155><145><156><157><158><159><160>
+<174>	->	[IDN]<182><167>[)]<155><145><156><157><158><159><160>
+<175>	->	[[]<normal expr>[]]<155><145><156><157><158><159><160><161>
+<175>	->	[Lambda]
+<175>	->	[*]<M><156><157><158><159><160><161>
+<175>	->	[/]<M><156><157><158><159><160><161>
+<175>	->	[%]<M><156><157><158><159><160><161>
+<175>	->	[+]<L><157><158><159><160><161>
+<175>	->	[-]<L><157><158><159><160><161>
+<175>	->	[<<]<K><158><159><160><161>
+<175>	->	[>>]<K><158><159><160><161>
+<175>	->	[<]<J><159><160><161>
+<175>	->	[<=]<J><159><160><161>
+<175>	->	[>]<J><159><160><161>
+<175>	->	[>=]<J><159><160><161>
+<175>	->	[==]<I><160><161>
+<175>	->	[!=]<I><160><161>
+<175>	->	[&]<H><161>
+<176>	->	[struct]<150><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162>
+<176>	->	[union]<150><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162>
+<176>	->	[short]<152><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162>
+<176>	->	[long]<151><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162>
+<176>	->	[void]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162>
+<176>	->	[char]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162>
+<176>	->	[double]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162>
+<176>	->	[float]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162>
+<176>	->	[int]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162>
+<176>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162>
+<176>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162>
+<176>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162>
+<176>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162>
+<176>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162>
+<176>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162>
+<176>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162>
+<176>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162>
+<176>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162>
+<176>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162>
+<176>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162>
+<176>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162>
+<176>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162>
+<176>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162>
+<176>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162>
+<176>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162>
+<176>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162>
+<176>	->	[STR]<181><167>[)]<155><145><156><157><158><159><160><161><162>
+<176>	->	[(]<180><167>[)]<155><145><156><157><158><159><160><161><162>
+<176>	->	[IDN]<182><167>[)]<155><145><156><157><158><159><160><161><162>
+<177>	->	[[]<normal expr>[]]<155><145><156><157><158><159><160><161><162><163>
+<177>	->	[Lambda]
+<177>	->	[*]<M><156><157><158><159><160><161><162><163>
+<177>	->	[/]<M><156><157><158><159><160><161><162><163>
+<177>	->	[%]<M><156><157><158><159><160><161><162><163>
+<177>	->	[+]<L><157><158><159><160><161><162><163>
+<177>	->	[-]<L><157><158><159><160><161><162><163>
+<177>	->	[<<]<K><158><159><160><161><162><163>
+<177>	->	[>>]<K><158><159><160><161><162><163>
+<177>	->	[<]<J><159><160><161><162><163>
+<177>	->	[<=]<J><159><160><161><162><163>
+<177>	->	[>]<J><159><160><161><162><163>
+<177>	->	[>=]<J><159><160><161><162><163>
+<177>	->	[==]<I><160><161><162><163>
+<177>	->	[!=]<I><160><161><162><163>
+<177>	->	[&]<H><161><162><163>
+<177>	->	[^]<G><162><163>
+<177>	->	[|]<F><163>
+<178>	->	[struct]<150><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164>
+<178>	->	[union]<150><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164>
+<178>	->	[short]<152><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164>
+<178>	->	[long]<151><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164>
+<178>	->	[void]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164>
+<178>	->	[char]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164>
+<178>	->	[double]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164>
+<178>	->	[float]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164>
+<178>	->	[int]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164>
+<178>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164>
+<178>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164>
+<178>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164>
+<178>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164>
+<178>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164>
+<178>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164>
+<178>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164>
+<178>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164>
+<178>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164>
+<178>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164>
+<178>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164>
+<178>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164>
+<178>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164>
+<178>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164>
+<178>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164>
+<178>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164>
+<178>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164>
+<178>	->	[STR]<181><167>[)]<155><145><156><157><158><159><160><161><162><163><164>
+<178>	->	[(]<180><167>[)]<155><145><156><157><158><159><160><161><162><163><164>
+<178>	->	[IDN]<182><167>[)]<155><145><156><157><158><159><160><161><162><163><164>
+<179>	->	[[]<normal expr>[]]<155><145><156><157><158><159><160><161><162><163><164><165>
+<179>	->	[Lambda]
+<179>	->	[*]<M><156><157><158><159><160><161><162><163><164><165>
+<179>	->	[/]<M><156><157><158><159><160><161><162><163><164><165>
+<179>	->	[%]<M><156><157><158><159><160><161><162><163><164><165>
+<179>	->	[+]<L><157><158><159><160><161><162><163><164><165>
+<179>	->	[-]<L><157><158><159><160><161><162><163><164><165>
+<179>	->	[<<]<K><158><159><160><161><162><163><164><165>
+<179>	->	[>>]<K><158><159><160><161><162><163><164><165>
+<179>	->	[<]<J><159><160><161><162><163><164><165>
+<179>	->	[<=]<J><159><160><161><162><163><164><165>
+<179>	->	[>]<J><159><160><161><162><163><164><165>
+<179>	->	[>=]<J><159><160><161><162><163><164><165>
+<179>	->	[==]<I><160><161><162><163><164><165>
+<179>	->	[!=]<I><160><161><162><163><164><165>
+<179>	->	[&]<H><161><162><163><164><165>
+<179>	->	[^]<G><162><163><164><165>
+<179>	->	[|]<F><163><164><165>
+<179>	->	[&&]<E><164><165>
+<179>	->	[||]<D><165>
+<180>	->	[struct]<150><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[union]<150><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[short]<152><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[long]<151><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[void]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[char]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[double]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[float]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[int]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[STR]<181><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[(]<180><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<180>	->	[IDN]<182><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<181>	->	[[]<normal expr>[]]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<181>	->	[Lambda]
+<181>	->	[*]<M><156><157><158><159><160><161><162><163><164><165><166>
+<181>	->	[/]<M><156><157><158><159><160><161><162><163><164><165><166>
+<181>	->	[%]<M><156><157><158><159><160><161><162><163><164><165><166>
+<181>	->	[+]<L><157><158><159><160><161><162><163><164><165><166>
+<181>	->	[-]<L><157><158><159><160><161><162><163><164><165><166>
+<181>	->	[<<]<K><158><159><160><161><162><163><164><165><166>
+<181>	->	[>>]<K><158><159><160><161><162><163><164><165><166>
+<181>	->	[<]<J><159><160><161><162><163><164><165><166>
+<181>	->	[<=]<J><159><160><161><162><163><164><165><166>
+<181>	->	[>]<J><159><160><161><162><163><164><165><166>
+<181>	->	[>=]<J><159><160><161><162><163><164><165><166>
+<181>	->	[==]<I><160><161><162><163><164><165><166>
+<181>	->	[!=]<I><160><161><162><163><164><165><166>
+<181>	->	[&]<H><161><162><163><164><165><166>
+<181>	->	[^]<G><162><163><164><165><166>
+<181>	->	[|]<F><163><164><165><166>
+<181>	->	[&&]<E><164><165><166>
+<181>	->	[||]<D><165><166>
+<181>	->	[?]<B>[:]<B><166>
+<182>	->	[Lambda]
+<182>	->	[>>=]<A>
+<182>	->	[<<=]<A>
+<182>	->	[^=]<A>
+<182>	->	[&=]<A>
+<182>	->	[|=]<A>
+<182>	->	[%=]<A>
+<182>	->	[/=]<A>
+<182>	->	[*=]<A>
+<182>	->	[-=]<A>
+<182>	->	[+=]<A>
+<182>	->	[=]<A>
+<182>	->	[(]<actual argument list>[)]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<182>	->	[[]<normal expr>[]]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<182>	->	[->][IDN]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<182>	->	[.][IDN]<155><145><156><157><158><159><160><161><162><163><164><165><166>
+<182>	->	[--]<156><157><158><159><160><161><162><163><164><165><166>
+<182>	->	[++]<156><157><158><159><160><161><162><163><164><165><166>
+<182>	->	[*]<M><156><157><158><159><160><161><162><163><164><165><166>
+<182>	->	[/]<M><156><157><158><159><160><161><162><163><164><165><166>
+<182>	->	[%]<M><156><157><158><159><160><161><162><163><164><165><166>
+<182>	->	[+]<L><157><158><159><160><161><162><163><164><165><166>
+<182>	->	[-]<L><157><158><159><160><161><162><163><164><165><166>
+<182>	->	[<<]<K><158><159><160><161><162><163><164><165><166>
+<182>	->	[>>]<K><158><159><160><161><162><163><164><165><166>
+<182>	->	[<]<J><159><160><161><162><163><164><165><166>
+<182>	->	[<=]<J><159><160><161><162><163><164><165><166>
+<182>	->	[>]<J><159><160><161><162><163><164><165><166>
+<182>	->	[>=]<J><159><160><161><162><163><164><165><166>
+<182>	->	[==]<I><160><161><162><163><164><165><166>
+<182>	->	[!=]<I><160><161><162><163><164><165><166>
+<182>	->	[&]<H><161><162><163><164><165><166>
+<182>	->	[^]<G><162><163><164><165><166>
+<182>	->	[|]<F><163><164><165><166>
+<182>	->	[&&]<E><164><165><166>
+<182>	->	[||]<D><165><166>
+<182>	->	[?]<B>[:]<B><166>
+<183>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145>
+<183>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145>
+<183>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145>
+<183>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145>
+<183>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145>
+<183>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145>
+<183>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145>
+<183>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145>
+<183>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145>
+<183>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145>
+<183>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145>
+<183>	->	[STR]<181><167>[)]<155><145>
+<183>	->	[(]<180><167>[)]<155><145>
+<183>	->	[IDN]<182><167>[)]<155><145>
+<183>	->	[struct]<150><data type modifier><pointer modifier>[)]<M>
+<183>	->	[union]<150><data type modifier><pointer modifier>[)]<M>
+<183>	->	[short]<152><data type modifier><pointer modifier>[)]<M>
+<183>	->	[long]<151><data type modifier><pointer modifier>[)]<M>
+<183>	->	[void]<data type modifier><pointer modifier>[)]<M>
+<183>	->	[char]<data type modifier><pointer modifier>[)]<M>
+<183>	->	[double]<data type modifier><pointer modifier>[)]<M>
+<183>	->	[float]<data type modifier><pointer modifier>[)]<M>
+<183>	->	[int]<data type modifier><pointer modifier>[)]<M>
+<183>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M>
+<183>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M>
+<183>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M>
+<183>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M>
+<183>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M>
+<183>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M>
+<184>	->	[Lambda]
+<184>	->	[[]<normal expr>[]]<155><145><156>
+<184>	->	[*]<M><156>
+<184>	->	[/]<M><156>
+<184>	->	[%]<M><156>
+<185>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157>
+<185>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157>
+<185>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157>
+<185>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157>
+<185>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157>
+<185>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157>
+<185>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157>
+<185>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157>
+<185>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157>
+<185>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157>
+<185>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157>
+<185>	->	[STR]<181><167>[)]<155><145><156><157>
+<185>	->	[(]<180><167>[)]<155><145><156><157>
+<185>	->	[IDN]<182><167>[)]<155><145><156><157>
+<185>	->	[struct]<150><data type modifier><pointer modifier>[)]<M><156><157>
+<185>	->	[union]<150><data type modifier><pointer modifier>[)]<M><156><157>
+<185>	->	[short]<152><data type modifier><pointer modifier>[)]<M><156><157>
+<185>	->	[long]<151><data type modifier><pointer modifier>[)]<M><156><157>
+<185>	->	[void]<data type modifier><pointer modifier>[)]<M><156><157>
+<185>	->	[char]<data type modifier><pointer modifier>[)]<M><156><157>
+<185>	->	[double]<data type modifier><pointer modifier>[)]<M><156><157>
+<185>	->	[float]<data type modifier><pointer modifier>[)]<M><156><157>
+<185>	->	[int]<data type modifier><pointer modifier>[)]<M><156><157>
+<185>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157>
+<185>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157>
+<185>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157>
+<185>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157>
+<185>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157>
+<185>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157>
+<186>	->	[Lambda]
+<186>	->	[[]<normal expr>[]]<155><145><156><157><158>
+<186>	->	[*]<M><156><157><158>
+<186>	->	[/]<M><156><157><158>
+<186>	->	[%]<M><156><157><158>
+<186>	->	[+]<L><157><158>
+<186>	->	[-]<L><157><158>
+<186>	->	[<<]<K><158>
+<186>	->	[>>]<K><158>
+<187>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159>
+<187>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159>
+<187>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159>
+<187>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159>
+<187>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159>
+<187>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159>
+<187>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159>
+<187>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159>
+<187>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159>
+<187>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159>
+<187>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159>
+<187>	->	[STR]<181><167>[)]<155><145><156><157><158><159>
+<187>	->	[(]<180><167>[)]<155><145><156><157><158><159>
+<187>	->	[IDN]<182><167>[)]<155><145><156><157><158><159>
+<187>	->	[struct]<150><data type modifier><pointer modifier>[)]<M><156><157><158><159>
+<187>	->	[union]<150><data type modifier><pointer modifier>[)]<M><156><157><158><159>
+<187>	->	[short]<152><data type modifier><pointer modifier>[)]<M><156><157><158><159>
+<187>	->	[long]<151><data type modifier><pointer modifier>[)]<M><156><157><158><159>
+<187>	->	[void]<data type modifier><pointer modifier>[)]<M><156><157><158><159>
+<187>	->	[char]<data type modifier><pointer modifier>[)]<M><156><157><158><159>
+<187>	->	[double]<data type modifier><pointer modifier>[)]<M><156><157><158><159>
+<187>	->	[float]<data type modifier><pointer modifier>[)]<M><156><157><158><159>
+<187>	->	[int]<data type modifier><pointer modifier>[)]<M><156><157><158><159>
+<187>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159>
+<187>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159>
+<187>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159>
+<187>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159>
+<187>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159>
+<187>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159>
+<188>	->	[Lambda]
+<188>	->	[[]<normal expr>[]]<155><145><156><157><158><159><160>
+<188>	->	[*]<M><156><157><158><159><160>
+<188>	->	[/]<M><156><157><158><159><160>
+<188>	->	[%]<M><156><157><158><159><160>
+<188>	->	[+]<L><157><158><159><160>
+<188>	->	[-]<L><157><158><159><160>
+<188>	->	[<<]<K><158><159><160>
+<188>	->	[>>]<K><158><159><160>
+<188>	->	[<]<J><159><160>
+<188>	->	[<=]<J><159><160>
+<188>	->	[>]<J><159><160>
+<188>	->	[>=]<J><159><160>
+<188>	->	[==]<I><160>
+<188>	->	[!=]<I><160>
+<189>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161>
+<189>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161>
+<189>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161>
+<189>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161>
+<189>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161>
+<189>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161>
+<189>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161>
+<189>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161>
+<189>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161>
+<189>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161>
+<189>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161>
+<189>	->	[STR]<181><167>[)]<155><145><156><157><158><159><160><161>
+<189>	->	[(]<180><167>[)]<155><145><156><157><158><159><160><161>
+<189>	->	[IDN]<182><167>[)]<155><145><156><157><158><159><160><161>
+<189>	->	[struct]<150><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161>
+<189>	->	[union]<150><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161>
+<189>	->	[short]<152><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161>
+<189>	->	[long]<151><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161>
+<189>	->	[void]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161>
+<189>	->	[char]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161>
+<189>	->	[double]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161>
+<189>	->	[float]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161>
+<189>	->	[int]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161>
+<189>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161>
+<189>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161>
+<189>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161>
+<189>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161>
+<189>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161>
+<189>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161>
+<190>	->	[Lambda]
+<190>	->	[[]<normal expr>[]]<155><145><156><157><158><159><160><161><162>
+<190>	->	[*]<M><156><157><158><159><160><161><162>
+<190>	->	[/]<M><156><157><158><159><160><161><162>
+<190>	->	[%]<M><156><157><158><159><160><161><162>
+<190>	->	[+]<L><157><158><159><160><161><162>
+<190>	->	[-]<L><157><158><159><160><161><162>
+<190>	->	[<<]<K><158><159><160><161><162>
+<190>	->	[>>]<K><158><159><160><161><162>
+<190>	->	[<]<J><159><160><161><162>
+<190>	->	[<=]<J><159><160><161><162>
+<190>	->	[>]<J><159><160><161><162>
+<190>	->	[>=]<J><159><160><161><162>
+<190>	->	[==]<I><160><161><162>
+<190>	->	[!=]<I><160><161><162>
+<190>	->	[&]<H><161><162>
+<190>	->	[^]<G><162>
+<191>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163>
+<191>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163>
+<191>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163>
+<191>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163>
+<191>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163>
+<191>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163>
+<191>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163>
+<191>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163>
+<191>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163>
+<191>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163>
+<191>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163>
+<191>	->	[STR]<181><167>[)]<155><145><156><157><158><159><160><161><162><163>
+<191>	->	[(]<180><167>[)]<155><145><156><157><158><159><160><161><162><163>
+<191>	->	[IDN]<182><167>[)]<155><145><156><157><158><159><160><161><162><163>
+<191>	->	[struct]<150><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163>
+<191>	->	[union]<150><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163>
+<191>	->	[short]<152><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163>
+<191>	->	[long]<151><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163>
+<191>	->	[void]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163>
+<191>	->	[char]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163>
+<191>	->	[double]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163>
+<191>	->	[float]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163>
+<191>	->	[int]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163>
+<191>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163>
+<191>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163>
+<191>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163>
+<191>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163>
+<191>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163>
+<191>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163>
+<192>	->	[Lambda]
+<192>	->	[[]<normal expr>[]]<155><145><156><157><158><159><160><161><162><163><164>
+<192>	->	[*]<M><156><157><158><159><160><161><162><163><164>
+<192>	->	[/]<M><156><157><158><159><160><161><162><163><164>
+<192>	->	[%]<M><156><157><158><159><160><161><162><163><164>
+<192>	->	[+]<L><157><158><159><160><161><162><163><164>
+<192>	->	[-]<L><157><158><159><160><161><162><163><164>
+<192>	->	[<<]<K><158><159><160><161><162><163><164>
+<192>	->	[>>]<K><158><159><160><161><162><163><164>
+<192>	->	[<]<J><159><160><161><162><163><164>
+<192>	->	[<=]<J><159><160><161><162><163><164>
+<192>	->	[>]<J><159><160><161><162><163><164>
+<192>	->	[>=]<J><159><160><161><162><163><164>
+<192>	->	[==]<I><160><161><162><163><164>
+<192>	->	[!=]<I><160><161><162><163><164>
+<192>	->	[&]<H><161><162><163><164>
+<192>	->	[^]<G><162><163><164>
+<192>	->	[|]<F><163><164>
+<192>	->	[&&]<E><164>
+<193>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[STR]<181><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[(]<180><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[IDN]<182><167>[)]<155><145><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[struct]<150><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[union]<150><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[short]<152><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[long]<151><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[void]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[char]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[double]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[float]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[int]<data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165>
+<193>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>[)]<M><156><157><158><159><160><161><162><163><164><165>
+<194>	->	[struct]<150><data type modifier><pointer modifier>[)]<213>
+<194>	->	[union]<150><data type modifier><pointer modifier>[)]<213>
+<194>	->	[short]<152><data type modifier><pointer modifier>[)]<213>
+<194>	->	[long]<151><data type modifier><pointer modifier>[)]<213>
+<194>	->	[void]<data type modifier><pointer modifier>[)]<213>
+<194>	->	[char]<data type modifier><pointer modifier>[)]<213>
+<194>	->	[double]<data type modifier><pointer modifier>[)]<213>
+<194>	->	[float]<data type modifier><pointer modifier>[)]<213>
+<194>	->	[int]<data type modifier><pointer modifier>[)]<213>
+<194>	->	[unsigned]<data type modifier><data type body><data type modifier><pointer modifier>[)]<213>
+<194>	->	[signed]<data type modifier><data type body><data type modifier><pointer modifier>[)]<213>
+<194>	->	[const]<data type modifier><data type body><data type modifier><pointer modifier>[)]<213>
+<194>	->	[extern]<data type modifier><data type body><data type modifier><pointer modifier>[)]<213>
+<194>	->	[static]<data type modifier><data type body><data type modifier><pointer modifier>[)]<213>
+<194>	->	[auto]<data type modifier><data type body><data type modifier><pointer modifier>[)]<213>
+<194>	->	[!]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<217>
+<194>	->	[~]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<217>
+<194>	->	[-]<M><156><157><158><159><160><161><162><163><164><165><166><167>[)]<217>
+<194>	->	[*]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<217>
+<194>	->	[&]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<217>
+<194>	->	[++]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<217>
+<194>	->	[--]<N><156><157><158><159><160><161><162><163><164><165><166><167>[)]<217>
+<194>	->	[sizeof]<153><156><157><158><159><160><161><162><163><164><165><166><167>[)]<217>
+<194>	->	[CH]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<217>
+<194>	->	[FNUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<217>
+<194>	->	[INUM]<156><157><158><159><160><161><162><163><164><165><166><167>[)]<217>
+<194>	->	[STR]<181><167>[)]<217>
+<194>	->	[(]<180><167>[)]<217>
+<194>	->	[IDN]<182><167>[)]<217>
+<195>	->	[:]<loop tail>
+<195>	->	[;]
+<195>	->	[?]<B>[:]<B><166><167>[;]
+<195>	->	[||]<D><165><166><167>[;]
+<195>	->	[&&]<E><164><165><166><167>[;]
+<195>	->	[|]<F><163><164><165><166><167>[;]
+<195>	->	[^]<G><162><163><164><165><166><167>[;]
+<195>	->	[&]<H><161><162><163><164><165><166><167>[;]
+<195>	->	[!=]<I><160><161><162><163><164><165><166><167>[;]
+<195>	->	[==]<I><160><161><162><163><164><165><166><167>[;]
+<195>	->	[>=]<J><159><160><161><162><163><164><165><166><167>[;]
+<195>	->	[>]<J><159><160><161><162><163><164><165><166><167>[;]
+<195>	->	[<=]<J><159><160><161><162><163><164><165><166><167>[;]
+<195>	->	[<]<J><159><160><161><162><163><164><165><166><167>[;]
+<195>	->	[>>]<K><158><159><160><161><162><163><164><165><166><167>[;]
+<195>	->	[<<]<K><158><159><160><161><162><163><164><165><166><167>[;]
+<195>	->	[-]<L><157><158><159><160><161><162><163><164><165><166><167>[;]
+<195>	->	[+]<L><157><158><159><160><161><162><163><164><165><166><167>[;]
+<195>	->	[%]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<195>	->	[/]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<195>	->	[*]<M><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<195>	->	[++]<156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<195>	->	[--]<156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<195>	->	[.][IDN]<155><145><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<195>	->	[->][IDN]<155><145><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<195>	->	[[]<normal expr>[]]<155><145><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<195>	->	[(]<actual argument list>[)]<155><145><156><157><158><159><160><161><162><163><164><165><166><167>[;]
+<195>	->	[=]<A><167>[;]
+<195>	->	[+=]<A><167>[;]
+<195>	->	[-=]<A><167>[;]
+<195>	->	[*=]<A><167>[;]
+<195>	->	[/=]<A><167>[;]
+<195>	->	[%=]<A><167>[;]
+<195>	->	[|=]<A><167>[;]
+<195>	->	[&=]<A><167>[;]
+<195>	->	[^=]<A><167>[;]
+<195>	->	[<<=]<A><167>[;]
+<195>	->	[>>=]<A><167>[;]
+<195>	->	[,]<A><167>[;]
+<196>	->	[IDN]<203>
+<196>	->	[{]<struct inner>[}]<209>
+<197>	->	[IDN]<202>
+<197>	->	[{]<struct inner>[}]<208>
+<198>	->	[IDN]<201>
+<199>	->	[IDN]<200>
+<200>	->	[(]<formal parameter list>[)]<function tail>
+<200>	->	[;]
+<200>	->	[[]<const value>[]]<array tail><single variable tail><variable list tail>[;]
+<200>	->	[=]<single variable init><variable list tail>[;]
+<200>	->	[,]<pointer modifier><variable list>[;]
+<201>	->	[(]<formal parameter list>[)]<function tail><program>
+<201>	->	[;]<program>
+<201>	->	[[]<const value>[]]<array tail><single variable tail><variable list tail>[;]<program>
+<201>	->	[=]<single variable init><variable list tail>[;]<program>
+<201>	->	[,]<pointer modifier><variable list>[;]<program>
+<202>	->	[{]<struct inner>[}]<208>
+<202>	->	[auto]<data type modifier><pointer modifier><198>
+<202>	->	[static]<data type modifier><pointer modifier><198>
+<202>	->	[extern]<data type modifier><pointer modifier><198>
+<202>	->	[const]<data type modifier><pointer modifier><198>
+<202>	->	[signed]<data type modifier><pointer modifier><198>
+<202>	->	[unsigned]<data type modifier><pointer modifier><198>
+<202>	->	[*]<const modifier><pointer modifier><198>
+<202>	->	[IDN]<201>
+<203>	->	[{]<struct inner>[}]<209>
+<203>	->	[auto]<data type modifier><pointer modifier><199>
+<203>	->	[static]<data type modifier><pointer modifier><199>
+<203>	->	[extern]<data type modifier><pointer modifier><199>
+<203>	->	[const]<data type modifier><pointer modifier><199>
+<203>	->	[signed]<data type modifier><pointer modifier><199>
+<203>	->	[unsigned]<data type modifier><pointer modifier><199>
+<203>	->	[*]<const modifier><pointer modifier><199>
+<203>	->	[IDN]<200>
+<204>	->	[IDN]<212>
+<204>	->	[{]<struct inner>[}]<216>
+<205>	->	[{]<struct inner>[}]<211>
+<205>	->	[IDN]<215>
+<206>	->	[IDN]<210>
+<206>	->	[{]<struct inner>[}]<214>
+<207>	->	[Lambda]
+<207>	->	[IDN]<array in parameter><formal parameter list tail>
+<207>	->	[auto]<data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<207>	->	[static]<data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<207>	->	[extern]<data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<207>	->	[const]<data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<207>	->	[signed]<data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<207>	->	[unsigned]<data type modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<207>	->	[*]<const modifier><pointer modifier>[IDN]<array in parameter><formal parameter list tail>
+<208>	->	[;]<program>
+<208>	->	[auto]<data type modifier><pointer modifier><198>
+<208>	->	[static]<data type modifier><pointer modifier><198>
+<208>	->	[extern]<data type modifier><pointer modifier><198>
+<208>	->	[const]<data type modifier><pointer modifier><198>
+<208>	->	[signed]<data type modifier><pointer modifier><198>
+<208>	->	[unsigned]<data type modifier><pointer modifier><198>
+<208>	->	[*]<const modifier><pointer modifier><198>
+<208>	->	[IDN]<201>
+<209>	->	[;]
+<209>	->	[auto]<data type modifier><pointer modifier><199>
+<209>	->	[static]<data type modifier><pointer modifier><199>
+<209>	->	[extern]<data type modifier><pointer modifier><199>
+<209>	->	[const]<data type modifier><pointer modifier><199>
+<209>	->	[signed]<data type modifier><pointer modifier><199>
+<209>	->	[unsigned]<data type modifier><pointer modifier><199>
+<209>	->	[*]<const modifier><pointer modifier><199>
+<209>	->	[IDN]<200>
+<210>	->	[{]<struct inner>[}]<214>
+<210>	->	[auto]<data type modifier><pointer modifier><variable list>[;]<struct inner>
+<210>	->	[static]<data type modifier><pointer modifier><variable list>[;]<struct inner>
+<210>	->	[extern]<data type modifier><pointer modifier><variable list>[;]<struct inner>
+<210>	->	[const]<data type modifier><pointer modifier><variable list>[;]<struct inner>
+<210>	->	[signed]<data type modifier><pointer modifier><variable list>[;]<struct inner>
+<210>	->	[unsigned]<data type modifier><pointer modifier><variable list>[;]<struct inner>
+<210>	->	[*]<const modifier><pointer modifier><variable list>[;]<struct inner>
+<210>	->	[IDN]<array tail><single variable tail><variable list tail>[;]<struct inner>
+<211>	->	[;]<program body>
+<211>	->	[auto]<data type modifier><pointer modifier><variable list>[;]<program body>
+<211>	->	[static]<data type modifier><pointer modifier><variable list>[;]<program body>
+<211>	->	[extern]<data type modifier><pointer modifier><variable list>[;]<program body>
+<211>	->	[const]<data type modifier><pointer modifier><variable list>[;]<program body>
+<211>	->	[signed]<data type modifier><pointer modifier><variable list>[;]<program body>
+<211>	->	[unsigned]<data type modifier><pointer modifier><variable list>[;]<program body>
+<211>	->	[*]<const modifier><pointer modifier><variable list>[;]<program body>
+<211>	->	[IDN]<array tail><single variable tail><variable list tail>[;]<program body>
+<212>	->	[{]<struct inner>[}]<216>
+<212>	->	[auto]<data type modifier><pointer modifier><variable list>[;]
+<212>	->	[static]<data type modifier><pointer modifier><variable list>[;]
+<212>	->	[extern]<data type modifier><pointer modifier><variable list>[;]
+<212>	->	[const]<data type modifier><pointer modifier><variable list>[;]
+<212>	->	[signed]<data type modifier><pointer modifier><variable list>[;]
+<212>	->	[unsigned]<data type modifier><pointer modifier><variable list>[;]
+<212>	->	[*]<const modifier><pointer modifier><variable list>[;]
+<212>	->	[IDN]<array tail><single variable tail><variable list tail>[;]
+<213>	->	[Lambda]
+<213>	->	[(]<183>
+<213>	->	[STR]<169>
+<213>	->	[INUM]
+<213>	->	[FNUM]
+<213>	->	[CH]
+<213>	->	[IDN]<may call func><155><145>
+<213>	->	[sizeof]<153>
+<213>	->	[--]<N>
+<213>	->	[++]<N>
+<213>	->	[&]<N>
+<213>	->	[*]<N>
+<213>	->	[-]<M>
+<213>	->	[~]<M>
+<213>	->	[!]<M>
+<214>	->	[;]<struct inner>
+<214>	->	[auto]<data type modifier><pointer modifier><variable list>[;]<struct inner>
+<214>	->	[static]<data type modifier><pointer modifier><variable list>[;]<struct inner>
+<214>	->	[extern]<data type modifier><pointer modifier><variable list>[;]<struct inner>
+<214>	->	[const]<data type modifier><pointer modifier><variable list>[;]<struct inner>
+<214>	->	[signed]<data type modifier><pointer modifier><variable list>[;]<struct inner>
+<214>	->	[unsigned]<data type modifier><pointer modifier><variable list>[;]<struct inner>
+<214>	->	[*]<const modifier><pointer modifier><variable list>[;]<struct inner>
+<214>	->	[IDN]<array tail><single variable tail><variable list tail>[;]<struct inner>
+<215>	->	[{]<struct inner>[}]<211>
+<215>	->	[auto]<data type modifier><pointer modifier><variable list>[;]<program body>
+<215>	->	[static]<data type modifier><pointer modifier><variable list>[;]<program body>
+<215>	->	[extern]<data type modifier><pointer modifier><variable list>[;]<program body>
+<215>	->	[const]<data type modifier><pointer modifier><variable list>[;]<program body>
+<215>	->	[signed]<data type modifier><pointer modifier><variable list>[;]<program body>
+<215>	->	[unsigned]<data type modifier><pointer modifier><variable list>[;]<program body>
+<215>	->	[*]<const modifier><pointer modifier><variable list>[;]<program body>
+<215>	->	[IDN]<array tail><single variable tail><variable list tail>[;]<program body>
+<216>	->	[;]
+<216>	->	[auto]<data type modifier><pointer modifier><variable list>[;]
+<216>	->	[static]<data type modifier><pointer modifier><variable list>[;]
+<216>	->	[extern]<data type modifier><pointer modifier><variable list>[;]
+<216>	->	[const]<data type modifier><pointer modifier><variable list>[;]
+<216>	->	[signed]<data type modifier><pointer modifier><variable list>[;]
+<216>	->	[unsigned]<data type modifier><pointer modifier><variable list>[;]
+<216>	->	[*]<const modifier><pointer modifier><variable list>[;]
+<216>	->	[IDN]<array tail><single variable tail><variable list tail>[;]
+<217>	->	[Lambda]
+<217>	->	[[]<normal expr>[]]<155><145>
+<217>	->	[->][IDN]<155><145>
+<217>	->	[.][IDN]<155><145>
+<217>	->	[--]
+<217>	->	[++]
