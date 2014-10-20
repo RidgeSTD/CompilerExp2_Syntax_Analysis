@@ -1,6 +1,6 @@
 #coding:utf-8
 
-import re
+import lexical_analysis
 
 GRAMMAR ={}
 
@@ -10,6 +10,8 @@ TERMINAL=[]
 FIRST={}
 FOLLOW={}
 PARSING_TABLE={}
+
+token_sequence=[]
 
 
 def grammar_scanner():
@@ -59,6 +61,8 @@ def grammar_scanner():
 		for each in terminals:
 			if not each in TERMINAL:
 				TERMINAL.append(each)
+				
+		TERMINAL.append('$')
 		
 
 def getFirst():
@@ -134,13 +138,14 @@ def getFollow():
 def get_parsing_table():
 	# 算法4.4
 	global FIRST, FOLLOW, PARSING_TABLE
-	# 初始化
+	# 初始化,将预测分析表中的空白处赋值为-100
 	for each_nonterminal in NONTERMINAL:
 		PARSING_TABLE[each_nonterminal]={}
 		for each_terminal in TERMINAL:
-			PARSING_TABLE[each_nonterminal][each_terminal]=-1
+			PARSING_TABLE[each_nonterminal][each_terminal]=-100
 
 
+	# 构建预测分析表
 	for each_nonterminal in NONTERMINAL:
 		for i in xrange(0,len(GRAMMAR[each_nonterminal])):
 			counter = 0
@@ -170,6 +175,12 @@ def get_parsing_table():
 						else:
 							PARSING_TABLE[each_nonterminal][each_follow]=i
 
+		# 加入同步记号，同步记号标记位-1
+		for each_nonterminal in NONTERMINAL:
+			for each_follow in FOLLOW[each_nonterminal]:
+				if PARSING_TABLE[each_nonterminal][each_follow]<0:
+					PARSING_TABLE[each_nonterminal][each_follow]=-1
+
 
 def main():
 	global GRAMMAR, NONTERMINAL, TERMINAL
@@ -177,26 +188,8 @@ def main():
 	getFirst()
 	getFollow()
 	get_parsing_table()
-
-	# print('语法:')
-	# for each in NONTERMINAL:
-	# 	for each_sequence in GRAMMAR[each]:
-	# 		print(each,'->',each_sequence)
-
-
-	# for each_nonterminal in NONTERMINAL:
-	# 	print(each_nonterminal,FOLLOW[each_nonterminal])
-
-	# s="   "
-	# for each_terminal in TERMINAL:
-	# 	s = s+each_terminal+"  "
-	# print(s)
-	# print('')
-	# for each_nonterminal in NONTERMINAL:
-	# 	s = each_nonterminal+"\t  "
-	# 	for each_terminal in TERMINAL:
-	# 		s = s+"\t\t"+str(PARSING_TABLE[each_nonterminal][each_terminal])
-	# 	print(s)
+	token_sequence=lexical_analysis.main()
+	print(token_sequence)
 
 if __name__ == '__main__':
 	main()

@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
 encoding/Exp2.py=utf-8
-encoding/kernel.py=utf-8
+encoding/lexical_analysis.py=utf-8
+encoding/syntax_analysis_kernel.py=utf-8
 encoding/test.py=utf-8
