@@ -11,7 +11,11 @@ FIRST={}
 FOLLOW={}
 PARSING_TABLE={}
 
-token_sequence=[]
+TOKEN_SEQUENCE=[]
+
+STACK_MAX_DEPTH=2000
+
+SYNTAX_RESULT=[]
 
 
 def grammar_scanner():
@@ -180,16 +184,62 @@ def get_parsing_table():
 			for each_follow in FOLLOW[each_nonterminal]:
 				if PARSING_TABLE[each_nonterminal][each_follow]<0:
 					PARSING_TABLE[each_nonterminal][each_follow]=-1
+					
+def syntax_parse():
+	global SYNTAX_RESULT
+
+	SYNTAX_RESULT=[]
+	stack=range(2100)
+	stack[0]='program'
+	stack_top=0
+	token_curse=0
+	while(stack_top>=0):
+		if stack_top>STACK_MAX_DEPTH:
+			print('警告:预测分析栈深度超过2000,程序安全退出。如需调整请于开发者联系')
+		if(stack[stack_top] in TERMINAL):
+			# 成功匹配终结符，出栈
+			if stack[stack_top]==TOKEN_SEQUENCE[token_curse]:
+				SYNTAX_RESULT.append('leaf:'+TOKEN_SEQUENCE[token_curse])
+				print(stack[stack_top]+'出栈!')
+				
+			else:
+				SYNTAX_RESULT.append('error:不可接受的终结符:'+TOKEN_SEQUENCE[token_curse])
+			stack_top=stack_top-1
+			token_curse=token_curse+1
 
 
+		else:
+			print('stack_top',stack_top,'tokencurse',token_curse)
+			if PARSING_TABLE[stack[stack_top]][TOKEN_SEQUENCE[token_curse]]<0:
+				if PARSING_TABLE[stack[stack_top]][TOKEN_SEQUENCE[token_curse]]==-1:
+					# 弹出栈顶元素回复错误
+					SYNTAX_RESULT.append('error:'+TOKEN_SEQUENCE[token_curse]+'不可接受,进入同步恢复状态,栈顶元素为:'+stack[stack_top])
+					stack_top=stack_top-1
+				else:
+					# 忽略该符号，恢复错误
+					SYNTAX_RESULT.append('error:'+TOKEN_SEQUENCE[token_curse]+'不可接受,忽略该符号以恢复错误,栈顶元素为:'+stack[stack_top])
+					token_curse=token_curse+1
+			else:
+				# 状态可接受，替换栈顶元素
+				tmp_sequence=GRAMMAR[stack[stack_top]][PARSING_TABLE[stack[stack_top]][TOKEN_SEQUENCE[token_curse]]]
+				print('pop:'+stack[stack_top]+' push:',tmp_sequence)
+				stack_top=stack_top-1
+				for x in xrange(0,len(tmp_sequence)):
+					stack_top=stack_top+1
+					stack[stack_top]=tmp_sequence[len(tmp_sequence)-1-x]
+					print('stack_top',stack_top,'tokencurse',token_curse)
+					
 def main():
-	global GRAMMAR, NONTERMINAL, TERMINAL
+	global GRAMMAR, NONTERMINAL, TERMINAL,TOKEN_SEQUENCE
 	grammar_scanner()
 	getFirst()
 	getFollow()
 	get_parsing_table()
-	token_sequence=lexical_analysis.main()
-	print(token_sequence)
+	TOKEN_SEQUENCE=lexical_analysis.main()
+	syntax_parse()
+# 	print(TOKEN_SEQUENCE)
+	
+
 
 if __name__ == '__main__':
 	main()

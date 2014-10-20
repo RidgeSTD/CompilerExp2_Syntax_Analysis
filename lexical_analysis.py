@@ -139,7 +139,7 @@ def tokenizer(ch):
 					result.append(buf)
 				else:
 					console_msg = console_msg + '('+buf+' , 标识符)\n'
-					result.append('id')
+					result.append('IDN')
 				buf = ""
 				currentState = 'A'
 				continue
@@ -157,7 +157,7 @@ def tokenizer(ch):
 				return
 			else:#可接受状态
 				console_msg = console_msg + '('+ buf + ' , 整数常量)\n'
-				result.append('int')
+				result.append('INUM')
 				buf = ""
 				currentState = 'A'
 				continue
@@ -189,7 +189,7 @@ def tokenizer(ch):
 		##############     状态H        #################
 		elif currentState == 'H':
 			console_msg = console_msg + '(' + buf+ ' ,字符常量)\n'
-			result.append['char']
+			result.append['CH']
 			buf = ""
 			currentState = 'A'
 			return
@@ -305,7 +305,7 @@ def tokenizer(ch):
 				return
 			else:
 				console_msg = console_msg+'('+buf+' , 浮点数常量)\n'
-				result.append('float')
+				result.append('FNUM')
 				buf=""
 				currentState='A'
 				continue
@@ -538,9 +538,13 @@ def scanner(text):
 			mLine = 0
 			
 def main():
-	global result
+	global result,console_msg
 	fp = open('code.c','r')
 	scanner(fp.read())
+	console_msg= console_msg+'($,结束符)\n'
+	result.append('$')
+# 	print(conslole_msg)
+# 	print(result)
 	return result
 	
 
