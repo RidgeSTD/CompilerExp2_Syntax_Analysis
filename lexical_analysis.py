@@ -551,17 +551,18 @@ def scanner(text):
 			mRow += 1
 			mLine = 0
 	tokenizer('$')
+	return result
 		
 			
 def main():
 	global result,console_msg
 	fp = open('code.c','r')
-	scanner(fp.read())
+	tmp_result=scanner(fp.read())
 # 	console_msg= console_msg+'($,结束符)\n'
 # 	result.append('$')
 	print(console_msg)
-	print(result)
-	return result
+	print(tmp_result)
+	return tmp_result
 	
 
 if __name__ == '__main__':

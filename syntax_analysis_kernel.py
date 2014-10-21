@@ -22,6 +22,7 @@ def grammar_scanner():
 
 	fp = open('grammar.ds','r')
 	grammar_lines = fp.readlines()
+	fp.close()
 	for each_line in grammar_lines:
 		tmp=''
 		bracket = ''
@@ -71,7 +72,6 @@ def grammar_scanner():
 
 def getFirst():
 	global GRAMMAR, NONTERMINAL, TERMINAL, FIRST
-	print("__ingetFirst__")
 	for each in TERMINAL:
 		FIRST[each]=[each]
 
@@ -89,8 +89,6 @@ def getFirst():
 			# 将Y0中新增的first填入并处理连续的有null
 			for each_sequence in GRAMMAR.get(each_nonterminal, []):
 				counter=0
-				if(each_sequence==[]):
-					print('Wrong! in Kernel(#1)')
 				for each_mark in each_sequence:
 					for each_marks_first in FIRST[each_mark]:
 						if ((each_marks_first!='null') and (not each_marks_first in FIRST[each_nonterminal])):
@@ -234,20 +232,31 @@ def syntax_parse():
 					stack[stack_top]=tmp_sequence[len(tmp_sequence)-1-x]
 				SYNTAX_RESULT.append(tmp_str)
 				
-	for each in SYNTAX_RESULT:
-		print(each)
-					
-def main():
-	global GRAMMAR, NONTERMINAL, TERMINAL,TOKEN_SEQUENCE
+# 	for each in SYNTAX_RESULT:
+# 		print(each)
+
+def compiler_init():
 	grammar_scanner()
 	getFirst()
 	getFollow()
 	get_parsing_table()
-	TOKEN_SEQUENCE=lexical_analysis.main()
-	syntax_parse()
-# 	print(TOKEN_SEQUENCE)
-	
 
+def driver(code):
+	global GRAMMAR, NONTERMINAL, TERMINAL,TOKEN_SEQUENCE,SYNTAX_RESULT
+	compiler_init
+	TOKEN_SEQUENCE=lexical_analysis.scanner(code)
+	syntax_parse()
+	return SYNTAX_RESULT
+	
+def drive_from_file():
+	fp = open('code.c','r')
+	input_stream=fp.read()
+	fp.close()
+	return driver(input_stream)
+					
+def main():
+	drive_from_file()
+	return SYNTAX_RESULT	
 
 if __name__ == '__main__':
 	main()
