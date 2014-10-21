@@ -123,6 +123,9 @@ def tokenizer(ch):
 				result.append(ch)
 				currentState='A'
 				return
+			elif(ch=='$'):
+				buf = buf + ch
+				currentState='$'
 			else:
 				compilerFail('不可识别的字符')
 				return
@@ -519,6 +522,16 @@ def tokenizer(ch):
 			buf = ""
 			currentState = 'A'
 			return
+		
+		##############     状态$         #################
+		elif currentState=='$':
+			console_msg = console_msg+'('+buf+' ,终结符)\n'
+			result.append(buf)
+			buf = ""
+			currentState = 'A'
+			return
+		
+		
 
 
 def scanner(text):
@@ -526,6 +539,7 @@ def scanner(text):
 	global mRow
 	global buf
 	global console_msg
+	global currentState
 
 	buf = ""
 	console_msg = ""
@@ -536,15 +550,17 @@ def scanner(text):
 		if(text[i]=='\n'):
 			mRow += 1
 			mLine = 0
+	tokenizer('$')
+		
 			
 def main():
 	global result,console_msg
 	fp = open('code.c','r')
 	scanner(fp.read())
-	console_msg= console_msg+'($,结束符)\n'
-	result.append('$')
-# 	print(conslole_msg)
-# 	print(result)
+# 	console_msg= console_msg+'($,结束符)\n'
+# 	result.append('$')
+	print(console_msg)
+	print(result)
 	return result
 	
 
