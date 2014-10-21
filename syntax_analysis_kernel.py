@@ -243,7 +243,6 @@ def compiler_init():
 
 def driver(code):
 	global GRAMMAR, NONTERMINAL, TERMINAL,TOKEN_SEQUENCE,SYNTAX_RESULT
-	compiler_init
 	TOKEN_SEQUENCE=lexical_analysis.scanner(code)
 	syntax_parse()
 	return SYNTAX_RESULT
@@ -255,8 +254,10 @@ def drive_from_file():
 	return driver(input_stream)
 					
 def main():
+	compiler_init()
 	drive_from_file()
-	return SYNTAX_RESULT	
+	for each in SYNTAX_RESULT:
+		print(each)
 
 if __name__ == '__main__':
 	main()

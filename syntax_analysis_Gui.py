@@ -4,7 +4,7 @@ from Tkinter import *
 import syntax_analysis_kernel
 import Tkinter
 
-code_entry=None
+code_text=None
 result_listBox=None
 root=None
 frame=None
@@ -13,10 +13,17 @@ compile_from_file_btn =None
 var=None
 
 def on_click():
-	global code_entry,result_message
-	result_message.delete(0, END)
-	tmp_str = code_entry.get()
-	result_message.insert(0, tmp_str)
+	global code_text,result_listBox
+# 	print('hahaha')
+# 	print(result_listBox.size())
+	tmp_str = code_text.get('0.0', END)
+	print(tmp_str)
+	result_listBox.delete(0, result_listBox.size())
+	result = syntax_analysis_kernel.driver(tmp_str)
+	for each in result:
+		result_listBox.insert(END,each)
+	
+	
 	
 def onclick_file():
 	global result_listBox
@@ -28,29 +35,45 @@ def onclick_file():
 	
 
 def main():
-	global code_entry,result_listBox,frame,frame2,compile_from_file_btn,var
+	global code_text,result_listBox,frame,frame2,compile_from_file_btn
 	root = Tk()
+	root.geometry('800x600')
 	root.title('DaggerStudio LL1 Compiler')
 
-	frame=Frame(root,width=600,height=400)
+	frame=Frame(root)
 	frame.pack(side=TOP)
 	
-	frame2=Frame(root,width=600,height=100)
+	frameleftup=Frame(frame)
+	frameleftup.pack(side=LEFT,fill=BOTH)
+	
+	framerightup=Frame(frame)
+	framerightup.pack(side=LEFT)
+	
+	frame2=Frame(root)
 	frame2.pack(side=BOTTOM)
 
-	code_entry = Entry(frame)
-	code_entry.pack(side=LEFT,ipadx=190,ipady=300,anchor='nw')
+	scrollbary_text = Scrollbar(frameleftup)
+	scrollbary_text.pack(side=RIGHT,fill=Y)
+	
+	scrollbarx_text = Scrollbar(frameleftup,orient = HORIZONTAL)
+	scrollbarx_text.pack(side=BOTTOM,fill=X)
+	code_text = Text(frameleftup,yscrollcommand=scrollbary_text.set,xscrollcommand=scrollbarx_text.set)
+	code_text.pack(side=LEFT,fill=BOTH)
+	scrollbary_text.config(command=code_text.yview)
+	scrollbarx_text.config(command=code_text.xview)
 	
 # 	设置右侧的结果界面
-	scrollbar = Scrollbar(frame2)
-	scrollbar.pack(side=RIGHT, fill=Y)
+	scrollbary = Scrollbar(framerightup)
+	scrollbary.pack(side=RIGHT,fill=Y)
 	
-	result_listBox = Tkinter.Listbox(frame2, yscrollcommand=scrollbar.set)
-	result_listBox.pack(side=RIGHT,ipadx=300,ipady=300)
-	result_listBox.see(10)
-	for x in xrange (1,15):
-		result_listBox.insert(END,'index')
-	scrollbar.config(command=result_listBox.yview)
+	scrollbarx = Scrollbar(framerightup,orient = HORIZONTAL)
+	scrollbarx.pack(side=BOTTOM,fill=X)
+	
+	result_listBox = Tkinter.Listbox(framerightup, yscrollcommand=scrollbary.set,xscrollcommand=scrollbarx.set)
+	result_listBox.pack(side=RIGHT,ipadx=400,ipady=180)
+	result_listBox.see(20)
+	scrollbary.config(command=result_listBox.yview)
+	scrollbarx.config(command=result_listBox.xview)
 	
 
 # 	设置下面的按钮
