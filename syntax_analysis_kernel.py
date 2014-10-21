@@ -192,6 +192,9 @@ def syntax_parse():
 	stack_top=0
 	token_curse=0
 	while(stack_top>=0):
+		if(token_curse>=len(TOKEN_SEQUENCE)):
+			SYNTAX_RESULT.append('error:程序结构不完整,编译失败')
+			break;
 		if stack_top>STACK_MAX_DEPTH:
 			print('警告:预测分析栈深度超过2000,程序安全退出。如需调整请于开发者联系')
 			exit(0)
@@ -232,6 +235,9 @@ def syntax_parse():
 					stack[stack_top]=tmp_sequence[len(tmp_sequence)-1-x]
 				SYNTAX_RESULT.append(tmp_str)
 				
+	if token_curse<(len(TOKEN_SEQUENCE)-1):
+		SYNTAX_RESULT.append('error:程序结构不完整,编译失败')
+				
 # 	for each in SYNTAX_RESULT:
 # 		print(each)
 
@@ -244,6 +250,7 @@ def compiler_init():
 def driver(code):
 	global GRAMMAR, NONTERMINAL, TERMINAL,TOKEN_SEQUENCE,SYNTAX_RESULT
 	TOKEN_SEQUENCE=lexical_analysis.scanner(code)
+# 	print(TOKEN_SEQUENCE)
 	syntax_parse()
 	return SYNTAX_RESULT
 	
@@ -256,6 +263,7 @@ def drive_from_file():
 def main():
 	compiler_init()
 	drive_from_file()
+	print(TOKEN_SEQUENCE)
 	for each in SYNTAX_RESULT:
 		print(each)
 
