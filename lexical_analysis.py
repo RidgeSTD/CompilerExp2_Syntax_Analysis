@@ -521,7 +521,7 @@ def tokenizer(ch):
 				continue
 
 		##############     状态B<         #################
-		elif currentState=='B!':
+		elif currentState=='B<':
 			console_msg = console_msg+'('+buf+' ,操作符)\n'
 			result.append(buf)
 			buf = ""
